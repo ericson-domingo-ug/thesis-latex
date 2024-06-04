@@ -22,85 +22,94 @@
 	Canopy temperatures are typically measured by sensors from meteorological stations or vehicles,
 	while boundary temperatures are measured by sensors from specialized platforms such as tall towers or aircrafts (\cite{Zhou2018}).
 
-\section{Radiant Heat and Energy Balance}
+\section{Energy Budget and Balance}
+
 	The heating of the Earth is caused by the exchange of energy between the Sun, the Earth's atmosphere, and the Earth's surface.
 	The solar rays incident on the Earth, combined with the Earth's rotation, creates a diurnal energy balance (\cite{Wallace2006}).
 	These energy exchanges can be associated with an energy flux density, with units $\si{W.m^{-2}}$.
 	
-	\begin{figure}	
-		\centering
-		\includegraphics{radiation-budget}
-		\caption{Radiation budget. Taken from \textcite{Oke1982}.}
-		\label{fig:radiation-budget}
-	\end{figure}
-
-	Figure \ref{fig:radiation-budget} depicts a schematic of the fluxes present in the heating of the Earth.
-	Shortwave radiation from the sun enters the urban boundary layer.
-	Some of the radiation (Fluxes 2 and 4) reach the surface with flux magnitude $Q_{S\downarrow}$.
-	The other radiation (Flux 3) is reflected or scattered back upward with flux magnitude $Q_{S\uparrow}$.
-	The atmosphere emits longwave radiation, with some (Fluxes 7 and 8)
-	reaching the Earth’s surface with flux magnitude $Q_{L\downarrow}$.
-	The Earth’s surface also emits longwave radiation (Flux 5) upward with flux magnitude $Q_{L\uparrow}$.
-	The net radiation flux $Q^*$ then is given by (\cite{Wallace2006})
-	\begin{equation}
-		Q^* = Q_{S\downarrow} - Q_{S\uparrow} + Q_{L\downarrow} - Q_{L\uparrow}.
-	\end{equation}
+	\subsection{Surface Radiation Budget}
 	
-	\begin{figure}	
-		\centering
-		\includegraphics[width=\textwidth]{surface-energy-balance}
-		\caption{
-			Schematic of the fluxes in the surface energy balance of \textit{(a)} a rural and \textit{(b)} an urban building-soil-air volume. 
-			The volume that extends from the top of the roughness sublayer ($z_\text{top}$) down to a depth where there is no net conduction over the	period of interest ($z_\text{bot}$).
-			Arrows are drawn in the direction the corresponding flux is considered positive.
-			For $\Delta Q_S$ and $\Delta Q_A$, they are positive if the internal energy of the volume increases.
-			Taken from \textcite{Oke2017urban}.
-		}
-		\label{fig:surface-energy-balance}
-	\end{figure}
-		
-	In a rural environment, the surplus of energy provided by $Q^*$ is shared by the soil and the air.
-	Heat is dissipated via conduction to the soil with flux $Q_G$,
-		and via convection of sensible and latent heat with fluxes $Q_H$ and $Q_E$ respectively. 
-	Thus,
-	\begin{equation}
-		Q^* = Q_G + Q_H + Q_E.
-	\end{equation}
-	An urban environment, however, modifies the energy balance in multiple ways:
-	\begin{enumerate}
-		\item \textbf{Canyon geometry of buildings.}
-		Dense tall buildings create a canyon geometry,
-			which causes radiation to get trapped in between the vertical surfaces through multiple reflections.
-		This gives a greater absorption of shortwave radiation.
-		This also causes a reduction of wind speed, which trap warm air.
-		
-		\item \textbf{Construction materials.}
-		Buildings and paved surfaces are made with materials that have great heat absorption and heat storage.
-		
-		\item \textbf{Removal of plants and soil.}
-		The replacement of plants and moist soil with paved and waterproof surfaces reduces evapotranspiration.
-		More of the net radiation flux is thus converted into sensible heat, rather than latent heat.
-		
-		\item \textbf{Air pollution.}
-		A polluted atmosphere has greater absorption and re-emission of radiation, thus increasing longwave radiation flux.
-		
-		\item \textbf{Anthropogenic heat.}
-		There is a release of heat from man-made activities such as from
-			the combustion of fuels in vehicles,
-			industrial processes, and
-			air-conditioning in rooms.
-		Humans also release heat and moisture from metabolism, but is not as significant compared to the activities mentioned.
-	\end{enumerate}
+		\begin{figure}	
+			\centering
+			\includegraphics{radiation-budget}
+			\caption{Radiation budget. Taken from \textcite{Oke1982}.}
+			\label{fig:radiation-budget}
+		\end{figure}
+	
+		Figure \ref{fig:radiation-budget} depicts a schematic of the fluxes present in the heating of the Earth.
+		Shortwave radiation from the sun enters the urban boundary layer.
+		Some of the radiation (Fluxes 2 and 4) reach the surface with flux magnitude $Q_{S\downarrow}$.
+		The other radiation (Flux 3) is reflected or scattered back upward with flux magnitude $Q_{S\uparrow}$.
+		The atmosphere emits longwave radiation, with some (Fluxes 7 and 8)
+		reaching the Earth’s surface with flux magnitude $Q_{L\downarrow}$.
+		The Earth’s surface also emits longwave radiation (Flux 5) upward with flux magnitude $Q_{L\uparrow}$.
+		The net radiation flux $Q^*$ then is given by (\cite{Wallace2006})
+		\begin{equation}
+			Q^* = Q_{S\downarrow} - Q_{S\uparrow} + Q_{L\downarrow} - Q_{L\uparrow}.
+		\end{equation}
 
-	Accordingly, extra terms are needed in the energy balance equation in order to account for these factors in the urban environment.
-	The energy balance equation thus becomes
-	\begin{equation}
-		Q^* + Q_F= Q_H + Q_E + \Delta Q_S + \Delta Q_A,
-	\end{equation}
-	where $Q_F$ is the anthropogenic heat release flux,
-	$\Delta Q_S$ is the storage heat flux,
-	$\Delta Q_A$ is the net advection that lets heat go through the sides of the volume, and
-	other terms as defined as before (\cite{Oke1988}).
+	\subsection{Rural Surface Energy Balance}
+	
+		\begin{figure}	
+			\centering
+			\includegraphics[width=\textwidth]{surface-energy-balance}
+			\caption{
+				Schematic of the fluxes in the surface energy balance of \textit{(a)} a rural and \textit{(b)} an urban building-soil-air volume. 
+				The volume that extends from the top of the roughness sublayer ($z_\text{top}$) down to a depth where there is no net conduction over the	period of interest ($z_\text{bot}$).
+				Arrows are drawn in the direction the corresponding flux is considered positive.
+				For $\Delta Q_S$ and $\Delta Q_A$, they are positive if the internal energy of the volume increases.
+				Taken from \textcite{Oke2017urban}.
+			}
+			\label{fig:surface-energy-balance}
+		\end{figure}
+	
+			
+		In a rural environment, the surplus of energy provided by $Q^*$ is shared by the soil and the air.
+		Heat is dissipated via conduction to the soil with flux $Q_G$,
+			and via convection of sensible and latent heat with fluxes $Q_H$ and $Q_E$ respectively. 
+		Thus,
+		\begin{equation}
+			Q^* = Q_G + Q_H + Q_E.
+		\end{equation}
+
+	\subsection{Urban Surface Energy Balance}
+
+		An urban environment, however, modifies the energy balance in multiple ways:
+		\begin{enumerate}
+			\item \textbf{Canyon geometry of buildings.}
+			Dense tall buildings create a canyon geometry,
+				which causes radiation to get trapped in between the vertical surfaces through multiple reflections.
+			This gives a greater absorption of shortwave radiation.
+			This also causes a reduction of wind speed, which trap warm air.
+			
+			\item \textbf{Construction materials.}
+			Buildings and paved surfaces are made with materials that have great heat absorption and heat storage.
+			
+			\item \textbf{Removal of plants and soil.}
+			The replacement of plants and moist soil with paved and waterproof surfaces reduces evapotranspiration.
+			More of the net radiation flux is thus converted into sensible heat, rather than latent heat.
+			
+			\item \textbf{Air pollution.}
+			A polluted atmosphere has greater absorption and re-emission of radiation, thus increasing longwave radiation flux.
+			
+			\item \textbf{Anthropogenic heat.}
+			There is a release of heat from man-made activities such as from
+				the combustion of fuels in vehicles,
+				industrial processes, and
+				air-conditioning in rooms.
+			Humans also release heat and moisture from metabolism, but is not as significant compared to the activities mentioned.
+		\end{enumerate}
+	
+		Accordingly, extra terms are needed in the energy balance equation in order to account for these factors in the urban environment.
+		The energy balance equation thus becomes
+		\begin{equation}
+			Q^* + Q_F= Q_H + Q_E + \Delta Q_S + \Delta Q_A,
+		\end{equation}
+		where $Q_F$ is the anthropogenic heat release flux,
+		$\Delta Q_S$ is the storage heat flux,
+		$\Delta Q_A$ is the net advection that lets heat go through the sides of the volume, and
+		other terms as defined as before (\cite{Oke1988}).
 	
 \section{Measurement of Urban Heat Islands}
 	There are three methods in which to study urban heat islands:
