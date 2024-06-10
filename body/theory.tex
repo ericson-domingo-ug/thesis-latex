@@ -72,8 +72,20 @@
 			
 		In a rural environment, the surplus of energy provided by $Q^*$ is shared by the soil and the air.
 		Heat is dissipated via conduction to the soil with flux $Q_G$,
-			and via convection of sensible and latent heat with fluxes $Q_H$ and $Q_E$ respectively. 
-		Thus,
+			and via convection of sensible and latent heat.
+		Sensible heat refers to heat that we can sense.
+		Sensible heat flux $Q_H$ refers to the fluid movement of warm air, and is driven by the difference between the surface and the atmosphere.
+		Eddies of warm air and cool air are mixed, thus lowering the temperature difference within the atmosphere (\cite{Oke2017urban}).	
+		Latent heat refers to the chemical energy of the phase changes of water. 
+		There is a latent heat flux $Q_E$ as the water vapor transports the heat to another location.
+		Given a mass flux density $E$ of water (with units $\si{kg.m^{-2}.s^{-1}}$), $Q_E$ is calculated by
+		\begin{equation}
+			Q_E = L_v E,
+		\end{equation}
+		where $L_v$ is the latent heat of vaporization of water.
+		At $15 \unit{\degreeCelsius}$, its value is $2.464 \si{MJ.kg^{-1}}$. 
+		%TODO: use proper siunitx command (I think \qty?)
+		Overall,
 		\begin{equation}
 			Q^* = Q_G + Q_H + Q_E.
 		\end{equation}
