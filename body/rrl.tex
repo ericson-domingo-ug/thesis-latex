@@ -24,24 +24,24 @@
 		
 		\textcite{Karlicky2018} evaluated the impact of urban surfaces on the climate of Berlin, Munich, and Prague.
 		The authors used to models: the Weather Research and Forecasting (WRF) model and Regional Climate Model (RegCM).
-		An average of 2 to 3 \degree C increase in temperature due to the urban heat island effect was reported.
+		An average of $\qtyrange{2}{3}{\degreeCelsius}$ increase in temperature due to the urban heat island effect was reported.
 		They also reported that urban effects could decrease concentration of primary pollutants.
 		Wind speed due to urban effects were highly dependent on the model and parametrizations used, though all of them were able to replicate the urban heat islands.
 		
 		\textcite{Ziter2019} evaluated the effectiveness of tree canopy cover as a mitigation strategy for urban heat.
 		The authors attached sensors and a GPS device to a bike and rode around Madison, Winsconsin, USA.
 		Using generalized additive models in R, they found that enough canopy cover can significantly help with cooling cities, 
-			with results showing about a 1 \degree C drop in temperature.
-		The researchers note that a 40\% canopy cover is needed in order to get the most cooling.
+			with results showing about a $\qty{1}{\degreeCelsius}$ drop in temperature.
+		The researchers note that a $\qty{40}{\percent}$ canopy cover is needed in order to get the most cooling.
 		
 		\textcite{Hsu2021} investigated the distribution of urban heat across the US demographic. 
 		They compared the land surface temperature from remote sensing with data from the US Census.
-		The mean surface urban heat intensity was found to be 2.2 \degree C.
+		The mean surface urban heat intensity was found to be $\qty{2.2}{\degreeCelsius}$.
 		The average person-of-color was found to live in areas of higher urban heat intensity than white people.
 		Similarly, people below the poverty line lived in areas of higher urban heat intensity compared to those who were twice above the poverty line.
 		
 		\textcite{Huszar2018} used RegCM to study the impact of urbanization on aerosols concentrations in Prague, the Czech Republic.
-		They found that urban heat effects caused a 2 to 3 K increase in temperature, and a wind speed reduction of about 1 m/s.
+		They found that urban heat effects caused a $\qtyrange{2}{3}{K}$ increase in temperature, and a wind speed reduction of about $\qty{1}{m/s}$.
 		They also found that secondary inorganic aerosols (such as nitrates) were the main contributor to the increase in temperature compared to other contributors.
 		
 				
@@ -61,39 +61,39 @@
 		\textcite{Wang2019} presented their preliminary findings on their modeling of Kuala Lumpur, Malaysia using ADMS-Urban.
 		The authors verified their findings with landsat images, though their original plan was to use data from local meteorological stations.
 		Wind speed depends on the time of day, but is shown to have a general inverse relationship with the intensity of the urban heat island effect.
-		The study reported an urban heat island intensity of 8 \degree C.
+		The study reported an urban heat island intensity of $\qty{8}{\degreeCelsius}$.
 		The study did not take into account anthropogenic heat.
 		
 		\textcite{Bhati2018} studied the urban heat island effect in Delhi, India using WRF and four different data sets on land use/land cover.
-		They report that urban areas were 1.5 to 2 \degree C hotter than rural areas, leading to a heat index change of 2.0 to 2.5 \degree C.
+		They report that urban areas were $\qtyrange{1.5}{2}{\degreeCelsius}$ hotter than rural areas, leading to a heat index change of $\qtyrange{2.0}{2.5}{\degreeCelsius}$.
 		This hotter heat index can lead to more thermal discomfort.
 
 	\subsection{The Philippines}
 		\textcite{AlmadronesReyes2022} used remote sensing technology to examine how land use has changed in Metro Manila from 2001 to 2019. 
 		They also examined the relationship between green spaces and temperature. 
 		Their results show a decrease in normalized difference vegetation index, 
-			as well as a 4 \degree C difference from 2001 to 2019.
+			as well as a $\qty{4}{\degreeCelsius}$ difference from 2001 to 2019.
 		
 		\textcite{Purio2022} assessed the urban heat islands in Manila City using satellite and meteorological data.
-		The authors report a 6 \degree C difference between the cold and hot parts of Manila.
+		The authors report a $\qty{6}{\degreeCelsius}$ difference between the cold and hot parts of Manila.
 		In addition, they note that areas with vegetation or bodies of water have lower surface temperature compared to residential areas, roadways, and commercial buildings.
 		The authors have also given six recommendations the Manila city government may use in order to mitigate urban heat.
 		
 		\textcite{Oliveros2019} studied a total of 19 places in the Philippines with WRF to see if their urbanization efforts have had an effect on weather.
 		They noted an urban heat island effect occurring, with a reported
-			0.4 \degree C to 2.4 \degree C minimum difference, and a 
-			0.83 \degree C to 2.3 \degree C maximum difference
+			$\qtyrange{0.4}{2.4}{\degreeCelsius}$ minimum difference, and a 
+			$\qtyrange{0.83}{2.3}{\degreeCelsius}$ maximum difference
 			between urban and rural areas of Metro Manila.
 		They also noted that urbanization led to more rainfall, though this finding was not statistically significant.
 		
 		\textcite{Cortes2022} evaluated the effectiveness of urban heat mitigation strategies in Mandaue, Cebu.
 		The authors used ENVI-met, a three-dimensional software model used to simulate urban areas with computational fluid dynamics.
-		They found that adding more trees and using green roofs could decrease surface temperature by about 0.4 \degree C to 1.1 \degree C.
+		They found that adding more trees and using green roofs could decrease surface temperature by about $\qtyrange{0.4}{1.1}{\degreeCelsius}$
 		Notably, based on the thermal comfort index, the authors concluded that people would still feel uncomfortable from the heat, despite employing mitigation strategies.
 		
 		\textcite{Bilang2022} simulated the air temperature and relative humidity of Metro Manila using WRF and an urban canopy model.
-		They reported an urban heat island intensity of 8 \degree C during the daytime, and
-			3 \degree C during the nighttime.
+		They reported an urban heat island intensity of $\qty{8}{\degreeCelsius}$ during the daytime, and
+			$\qty{3}{\degreeCelsius}$ during the nighttime.
 		Places near bodies of water, such as Laguna Lake, showed lower air temperatures.
 		They also showed that stagnant winds led to higher air temperatures.
 		The authors remarked that it is important to use actual urban morphology values in WRF in order to get accurate results.
@@ -101,12 +101,12 @@
 
 \section{Common Themes}
 	Studies report a correlation between temperature and urbanization, which is to be expected.
-	Reported temperature changes go from 1 \degree C (\cite{Huszar2018a}), 
+	Reported temperature changes go from $\qty{1}{\degreeCelsius}$ (\cite{Huszar2018a}), 
 		%up to 10 \degree C (\cite{Santamouris2020}).
-		up to 8 \degree C (\cite{Wang2019}).
-	For the Philippines specifically, reported temperature changes due to the urban heat island effect go from 0.4 \degree C (\cite{Oliveros2019}),
+		up to $\qty{8}{\degreeCelsius}$ (\cite{Wang2019}).
+	For the Philippines specifically, reported temperature changes due to the urban heat island effect go from $\qty{0.4}{\degreeCelsius}$ (\cite{Oliveros2019}),
 		%up to 6 \degree C (\cite{Purio2022}).
-		up to 8 \degree C (\cite{Bilang2022}).
+		up to $\qty{8}{\degreeCelsius}$ (\cite{Bilang2022}).
 	
 	There does not seem to be one common way of simulating urban heat.
 	A handful of studies use the Weather Research \& Forecasting Model (WRF) with an urban canopy model.
