@@ -149,17 +149,27 @@
 			Humans also release heat and moisture from metabolism, but is not as significant compared to the activities mentioned.
 		\end{enumerate}
 	
-		Accordingly, extra terms are needed in the energy balance equation in order to account for these factors in the urban environment.
+		Accordingly, modifications in the energy balance equation are needed.
+		First, instead of treating the heat flux densities as one-dimensional (along the vertical),
+			we consider a three-dimensional volume.
+		This way, we can model energy exchanges as occuring on any side of the urban environment, and not just the top.
+		We define the bottom of the volume, $z_\text{bot}$, as the depth into the ground wherein there is negligible net conduction over the period of interest.
+		We define the top of the volume, $z_\text{top}$, as the top of the roughness sublayer (\cite{Oke2017urban}).
+		
+		Second, the extra energy sources or energy sinks present in the urban environment need to be accounted for.
+		We add a term for anthropogenic heat release flux, $Q_F$,
+			a term for the storage heat flux, $\Delta Q_S$, and
+			a term for the net advection that lets heat go through the sides of the volume, $\Delta Q_A$.
+		
 		The energy balance equation thus becomes
 		\begin{equation}
-			Q^* + Q_F= Q_H + Q_E + \Delta Q_S + \Delta Q_A,
+			Q^* + Q_F= Q_H + Q_E + \Delta Q_S + \Delta Q_A
 		\end{equation}
-		where $Q_F$ is the anthropogenic heat release flux,
-		$\Delta Q_S$ is the storage heat flux,
-		$\Delta Q_A$ is the net advection that lets heat go through the sides of the volume, and
-		other terms as defined as before (\cite{Oke1988}).
+		for an urban environment (\cite{Oke2017urban}).
+		Figure \ref{fig:surface-energy-balance-urban} shows a schematic of the urban surface energy balance equation.
+		The $\Delta Q_A$ term may be avoided by assuming or selecting a homogeneous urban surface, wherein horizontal differences are negligible (\cite{Oke2017urban}).
 		
-				\begin{figure}	
+		\begin{figure}	
 			\centering
 			\includegraphics{surface-energy-balance-urban}
 			\caption{
