@@ -5,9 +5,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FRONT MATTER
 
-\pagenumbering{roman}
-
 \input{./frontmatter/title.tex}
+
+%\pagenumbering{roman}
+\frontmatter
 
 \ULCornerWallPaper{1}{./format/dlsu_thesis_paper_letterhead.pdf}
 
@@ -25,7 +26,8 @@
 % BODY
 
 \DoubleSpacing
-\pagenumbering{arabic}
+%\pagenumbering{arabic}
+\mainmatter
 
 \chapter{Introduction}
 	\label{ch:intro}
@@ -55,7 +57,7 @@
 
 \clearpage
 
-\appendix
+\backmatter
 \chapter{Colophon}
 	\input{./backmatter/colophon.tex}
 
