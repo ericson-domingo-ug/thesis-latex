@@ -24,3 +24,19 @@
 \section{Simulation Model}
 	This study will use the Regional Climate Model version 5 (RegCM5), which is described in detail by \textcite{Giorgi2023}.
 	RegCM5 is developed by the Abdus Salam International Centre for Theoretical Physics.
+	
+	\begin{table}
+		\label{tab:physics-schemes}
+		\caption{Configuration of the RegCM5 physics schemes.}
+		\centering
+		\begin{tabular}{l l}
+			\hline \hline
+			Physics scheme & Configuration\\
+			\hline
+			Radiation scheme & NCAR CCM3 \\
+			Land surface model & CLM4.5 \\
+			Planetary boundary layer scheme & Based on \textcite{Holtslag1990}\\
+			Cumulus convection scheme & Based on \textcite{Emanuel1991}\\
+			\hline
+		\end{tabular}		
+	\end{table}
