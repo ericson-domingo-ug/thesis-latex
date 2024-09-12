@@ -28,6 +28,21 @@
 
 \maxtocdepth{subsubsection} % chapters, sections, and subsections are in the table of contents
 
+\usepackage{titletoc} 
+\newcommand\partialtocname{Contents}
+\newcommand\ToCrule{\noindent\rule[5pt]{\textwidth}{1.3pt}}
+\newcommand\ToCtitle{{\large \bfseries \sffamily \partialtocname}
+	\vskip2pt\ToCrule}
+\makeatletter
+\newcommand\Mprintcontents{%
+	\begin{SingleSpace}
+		\ToCtitle
+		\startcontents[chapters]
+		\printcontents[chapters]{}{1}{}\par\nobreak
+	\end{SingleSpace}
+	\ToCrule}
+\makeatother
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LETTERHEAD and BORDERS
 \usepackage{wallpaper}
