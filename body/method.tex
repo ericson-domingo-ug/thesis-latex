@@ -59,13 +59,45 @@
 		the root mean square error (RMSE),
 		the mean absolute error (MAE), and
 		the index of agreement (IOA).
-	These statistics are computed using equations N to N,
+	These statistics are computed using equations \ref{eq:mean-bias} to \ref{eq:y-bar},
 		where $y_i$ is the modeled value, $y_{i,\text{obs}}$ is the observed value, and $N$ is the number of data points:
 	\begin{align}
-		\text{MB} &= b \\
-		\text{RMSE} &= d \\
-		\text{MAE} &= b \\
-		\text{IOA} &= d \\
-		\bar{y} &= d \\
+		\text{MB} &=
+			\frac{1}{N}
+			\sum_{i=1}^{N}
+			(y_i - y_{i,\text{obs}})
+			\label{eq:mean-bias}
+		\\
+		\text{RMSE} &=
+			\sqrt{
+				\frac{
+					\sum_{i=1}^{N}
+					(y_i - y_{i,\text{obs}}) ^ 2
+				}{N}
+			}
+			\label{eq:root-mean-square-error}
+		\\
+		\text{MAE} &=
+			\frac{1}{N}
+			\sum_{i=1}^{N} 
+			|y_i - y_{i,\text{obs}}| \label{eq:mean-absolute-error}
+		\\
+		\text{IOA} &=
+			1 - 
+			\frac{
+				\sum_{i=1}^{N}
+				(y_i - y_{i,\text{obs}}) ^ 2
+			}{
+				\sum_{i=1}^{N} (
+					|y_i - \bar{y}| +
+					|y_{i,\text{obs}} - \bar{y}|
+				)^2
+			}
+			\label{eq:index-of-agreement}
+		\\
+		\bar{y} &= 
+			\frac{1}{N}
+			\sum_{i=1}^{N} y_{i,\text{obs}}
+			\label{eq:y-bar}
 	\end{align}
 	
