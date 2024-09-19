@@ -100,4 +100,22 @@
 			\sum_{i=1}^{N} y_{i,\text{obs}}
 			\label{eq:y-bar}
 	\end{align}
+	The threshold for these values to determine if the model is performing well are given in Table \ref{tab:performance-statistics-threshold}, as adapted from \textcite{Bilang2022}.
+
+	\begin{table}	
+		\caption{Recommended values of statistical tests for near-surface air temperature.}
+		\label{tab:performance-statistics-threshold}
+		\centering
+		\begin{tabular}{l l}
+			\hline \hline
+			Statistical parameter & Criteria\\
+			\hline
+			MB & $\leq \pm \qty{2.0}{\degreeCelsius}$ \\
+			RMSE & $\leq \qty{3.5}{\degreeCelsius}$\\
+			MAE & $\leq \pm \qty{2.0}{\degreeCelsius}$\\
+			IOA	& $\geq \num{0.8}$\\
+			\hline
+		\end{tabular}		
+	\end{table}
+	
 	
