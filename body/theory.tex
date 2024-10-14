@@ -156,11 +156,11 @@
 		We define the bottom of the volume, $z_\text{bot}$, as the depth into the ground wherein there is negligible net conduction over the period of interest.
 		We define the top of the volume, $z_\text{top}$, as the top of the roughness sublayer (\cite{Oke2017urban}).
 		Second, the extra energy sources or energy sinks present in the urban environment need to be accounted for.
-		We add a term for anthropogenic heat release flux, $Q_F$,
-			a term for the storage heat flux, $\Delta Q_S$, and
+		We replace $Q_G$ with $\Delta Q_S$, a term for the storage heat flux.
+		We then add a term for anthropogenic heat release flux, $Q_F$, and
 			a term for the net advection that lets heat go through the sides of the volume, $\Delta Q_A$.
 		
-		The energy balance equation thus becomes
+		Applying the modifications mentioned, the energy balance equation thus becomes
 		\begin{equation}
 			Q^* + Q_F= Q_H + Q_E + \Delta Q_S + \Delta Q_A
 		\end{equation}
