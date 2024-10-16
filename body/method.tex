@@ -78,14 +78,15 @@
 		the index of agreement (IOA).
 	These statistics are computed using equations \ref{eq:mean-bias} to \ref{eq:y-bar},
 		where $y_i$ is the modeled value, $y_{i,\text{obs}}$ is the observed value, and $N$ is the number of data points:
-	\begin{align}
-		\text{MB} &=
+	\begin{equation}
+		\text{MB} =
 			\frac{1}{N}
 			\sum_{i=1}^{N}
 			(y_i - y_{i,\text{obs}})
 			\label{eq:mean-bias}
-		\\
-		\text{RMSE} &=
+	\end{equation}
+	\begin{equation}
+		\text{RMSE} =
 			\sqrt{
 				\frac{
 					\sum_{i=1}^{N}
@@ -93,13 +94,15 @@
 				}{N}
 			}
 			\label{eq:root-mean-square-error}
-		\\
-		\text{MAE} &=
+	\end{equation}
+	\begin{equation}
+		\text{MAE} =
 			\frac{1}{N}
 			\sum_{i=1}^{N} 
 			|y_i - y_{i,\text{obs}}| \label{eq:mean-absolute-error}
-		\\
-		\text{IOA} &=
+	\end{equation}
+	\begin{equation}
+		\text{IOA} =
 			1 - 
 			\frac{
 				\sum_{i=1}^{N}
@@ -111,12 +114,13 @@
 				)^2
 			}
 			\label{eq:index-of-agreement}
-		\\
-		\bar{y} &= 
+	\end{equation}
+	\begin{equation}
+		\bar{y} = 
 			\frac{1}{N}
 			\sum_{i=1}^{N} y_{i,\text{obs}}
 			\label{eq:y-bar}
-	\end{align}
+	\end{equation}
 	The threshold for these values to determine if the model is performing well are given in Table \ref{tab:performance-statistics-threshold}, as adapted from \textcite{Bilang2022}.
 
 	\begin{table}	
