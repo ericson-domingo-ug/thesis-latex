@@ -71,13 +71,9 @@
 	The ISD is maintained by the United States National Oceanic and Atmospheric Administration, and is readily available on their website 
 		(https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database).
 	
-	Four performance statistics will be computed: 
-		the mean bias (MB),
-		the root mean square error (RMSE),
-		the mean absolute error (MAE), and
-		the index of agreement (IOA).
-	These statistics are computed using equations \ref{eq:mean-bias} to \ref{eq:y-bar},
-		where $y_i$ is the modeled value, $y_{i,\text{obs}}$ is the observed value, and $N$ is the number of data points:
+	To evaluate the simulation, four performance statistics will be computed using equations \ref{eq:mean-bias} to \ref{eq:y-bar},
+		where $y_i$ is the modeled value, $y_{i,\text{obs}}$ is the observed value, and $N$ is the number of data points.
+	The mean bias (MB) blah blah blah.
 	\begin{equation}
 		\text{MB} =
 			\frac{1}{N}
@@ -85,6 +81,7 @@
 			(y_i - y_{i,\text{obs}})
 			\label{eq:mean-bias}
 	\end{equation}
+	The root mean square error (RMSE) blah blah blah.
 	\begin{equation}
 		\text{RMSE} =
 			\sqrt{
@@ -95,12 +92,14 @@
 			}
 			\label{eq:root-mean-square-error}
 	\end{equation}
+	The mean absolute error (MAE) blah blah blah.
 	\begin{equation}
 		\text{MAE} =
 			\frac{1}{N}
 			\sum_{i=1}^{N} 
 			|y_i - y_{i,\text{obs}}| \label{eq:mean-absolute-error}
 	\end{equation}
+	Lastly, the index of agreement (IOA) blah blah blah. It is computed as:
 	\begin{equation}
 		\text{IOA} =
 			1 - 
@@ -115,6 +114,7 @@
 			}
 			\label{eq:index-of-agreement}
 	\end{equation}
+	where
 	\begin{equation}
 		\bar{y} = 
 			\frac{1}{N}
