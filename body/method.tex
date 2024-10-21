@@ -81,7 +81,8 @@
 			(y_i - y_{i,\text{obs}}).
 			\label{eq:mean-bias}
 	\end{equation}
-	The root mean square error (RMSE) blah blah blah.
+	The root mean square error (RMSE) is similar to the MAE but more sensitive to large errors due to the squared term.
+	It is calculated by
 	\begin{equation}
 		\text{RMSE} =
 			\sqrt{
@@ -89,17 +90,19 @@
 					\sum_{i=1}^{N}
 					(y_i - y_{i,\text{obs}}) ^ 2
 				}{N}
-			}
+			}.
 			\label{eq:root-mean-square-error}
 	\end{equation}
-	The mean absolute error (MAE) blah blah blah.
+	The mean absolute error (MAE) is used to measure the closeness of the modeled and observed values.
+	It is calculated by
 	\begin{equation}
 		\text{MAE} =
 			\frac{1}{N}
 			\sum_{i=1}^{N} 
-			|y_i - y_{i,\text{obs}}| \label{eq:mean-absolute-error}
+			|y_i - y_{i,\text{obs}}|. \label{eq:mean-absolute-error}
 	\end{equation}
-	Lastly, the index of agreement (IOA) blah blah blah. It is computed as:
+	Lastly, the index of agreement (IOA) shows how an error-free model predicts a variable.
+	It is computed as
 	\begin{equation}
 		\text{IOA} =
 			1 - 
@@ -111,7 +114,7 @@
 					|y_i - \bar{y}| +
 					|y_{i,\text{obs}} - \bar{y}|
 				)^2
-			}
+			}.
 			\label{eq:index-of-agreement}
 	\end{equation}
 	where
