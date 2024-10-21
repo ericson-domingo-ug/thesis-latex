@@ -73,7 +73,7 @@
 	
 	To evaluate the simulation, four performance statistics will be computed using equations \ref{eq:mean-bias} to \ref{eq:y-bar},
 		where $y_i$ is the modeled value, $y_{i,\text{obs}}$ is the observed value, and $N$ is the number of data points (\cite{Bilang2022}).
-	The mean bias (MB) is a measure of the model to overestimate or underestimate a variable, and is calculated by
+	The mean bias (MB) is a measure of the model to overestimate or underestimate a variable (\cite{Carbonell2013}), and is calculated by
 	\begin{equation}
 		\text{MB} =
 			\frac{1}{N}
@@ -81,7 +81,7 @@
 			(y_i - y_{i,\text{obs}}).
 			\label{eq:mean-bias}
 	\end{equation}
-	The root mean square error (RMSE) is similar to the MAE but more sensitive to large errors due to the squared term.
+	The root mean square error (RMSE) is similar to the MAE but more sensitive to large errors due to the squared term (\cite{Carbonell2013}).
 	It is calculated by
 	\begin{equation}
 		\text{RMSE} =
@@ -93,7 +93,7 @@
 			}.
 			\label{eq:root-mean-square-error}
 	\end{equation}
-	The mean absolute error (MAE) is used to measure the closeness of the modeled and observed values.
+	The mean absolute error (MAE) is used to measure the closeness of the modeled and observed values (\cite{Arasa2016}.
 	It is calculated by
 	\begin{equation}
 		\text{MAE} =
