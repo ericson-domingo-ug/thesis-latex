@@ -101,7 +101,10 @@
 			\sum_{i=1}^{N} 
 			|y_i - y_{i,\text{obs}}|. \label{eq:mean-absolute-error}
 	\end{equation}
-	Lastly, the index of agreement (IOA) shows how an error-free model predicts a variable.
+	Lastly, the index of agreement (IOA), introduced by \textcite{Willmott1980}, shows how an error-free model predicts a variable.
+	The index ranges between \num{0} and \num{1},
+		with a value of \num{0} meaning no agreement between the model and observed data,
+		and a value of \num{1} meaning a perfect match. 
 	It is computed as
 	\begin{equation}
 		\text{IOA} =
