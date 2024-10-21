@@ -67,11 +67,13 @@
 	The Community Land Model has a model for urban energy balance and climate, which the default model lacks.
 	
 \section{Simulation Evaluation}
-	To determine the performance of the simulation, its results will be compared to real data from the Integrated Surface Database (ISD).
-	The ISD is maintained by the United States National Oceanic and Atmospheric Administration, and is readily available on their website 
-		(https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database).
+	To determine the performance of the simulation, an evaluation will be performed. The evaluation procedure is adapted from \textcite{Bilang2022}.
 	
-	To evaluate the simulation, four performance statistics will be computed using equations \ref{eq:mean-bias} to \ref{eq:y-bar},
+	The results of the simulation will be compared to real data from the Integrated Surface Database (ISD).
+	The ISD is maintained by the United States National Oceanic and Atmospheric Administration, and is readily available on their website 
+		(\url{https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database}).
+	
+	Four performance statistics will be computed using equations \ref{eq:mean-bias} to \ref{eq:y-bar},
 		where $y_i$ is the modeled value, $y_{i,\text{obs}}$ is the observed value, and $N$ is the number of data points (\cite{Bilang2022}).
 	The mean bias (MB) is a measure of the model to overestimate or underestimate a variable (\cite{Carbonell2013}), and is calculated by
 	\begin{equation}
