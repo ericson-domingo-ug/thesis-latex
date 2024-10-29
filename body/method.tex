@@ -1,22 +1,4 @@
 \section{Areas of Study}
-	\begin{table}	
-		\caption{Areas of study and their corresponding stations in the Integrated Surface Dataset (ISD).}
-		\label{tab:isd-stations}
-		\centering
-		\begin{tabular}{ll}
-			\hline \hline
-			Area of Study             & ISD Station Name                       \\
-			\hline
-			Angeles, Pampanga         & Clark International Airport        \\
-			Baguio, Benguet           & Baguio                             \\
-			Manila, Metro Manila      & Manila                             \\
-			Olongapo, Zambales        & Cubi Point                         \\
-			Pasay, Metrol Manila      & Ninoy Aquino International Airport \\
-			Quezon City, Metro Manila & Science Garden \\                   
-			\hline
-		\end{tabular}	
-	\end{table}
-	
 	Luzon is the largest island in the Philippines.
 	
 	This study will analyze six cities situated in Luzon:
@@ -98,11 +80,29 @@
 	
 \section{Simulation Evaluation}
 	To determine the performance of the simulation, an evaluation will be performed. The evaluation procedure is adapted from \textcite{Bilang2022}.
-	
 	The results of the simulation will be compared to real data from the Integrated Surface Database (ISD).
 	The ISD is maintained by the United States National Oceanic and Atmospheric Administration, and is readily available on their website 
 		(\url{https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database}).
-	
+	The areas of study as well as their corresponding stations to be used in the evaluation are listed in Table \ref{tab:isd-stations}.
+
+	\begin{table}	
+		\caption{Areas of study and their corresponding stations in the Integrated Surface Dataset (ISD).}
+		\label{tab:isd-stations}
+		\centering
+		\begin{tabular}{ll}
+			\hline \hline
+			Area of Study             & ISD Station Name                       \\
+			\hline
+			Angeles, Pampanga         & Clark International Airport        \\
+			Baguio, Benguet           & Baguio                             \\
+			Manila, Metro Manila      & Manila                             \\
+			Olongapo, Zambales        & Cubi Point                         \\
+			Pasay, Metrol Manila      & Ninoy Aquino International Airport \\
+			Quezon City, Metro Manila & Science Garden \\                   
+			\hline
+		\end{tabular}	
+	\end{table}
+
 	Four performance statistics will be computed using equations \ref{eq:mean-bias} to \ref{eq:y-bar},
 		where $y_i$ is the modeled value, $y_{i,\text{obs}}$ is the observed value, and $N$ is the number of data points (\cite{Bilang2022}).
 	The mean bias (MB) is a measure of the model to overestimate or underestimate a variable (\cite{Carbonell2013}), and is calculated by
