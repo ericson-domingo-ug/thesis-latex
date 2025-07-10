@@ -1,0 +1,55 @@
+\section{Hindcast Results}
+	\subsection{Model Evaluation}
+		Table X shows the evaluation results for the three stations inside Metro Manila: Manila, NAIA, and the Science Garden. 
+		All MB and RMSE values fall within the recommended values of $\leq \pm \qty{2.0}{\degreeCelsius}$ and $\leq \qty{3.5}{\degreeCelsius}$, respectively.
+		Furthermore, all MAE values, besides the the one for the CNRM-CM5 run with 16 km horizontal resolution, fall within the recommended value of $\leq \pm \qty{2.0}{\degreeCelsius}$.
+		Despite this, many runs show an IOA value $< 0.8$, indicating a bad agreement between the simulation and observed data.
+		A graph of the simulation data and observed data for Science Garden using CNRM-CM5 can be seen in Figure X. 
+		With the lower grid cell resolution, the simulation was able to follow the trend of the observed data, but its oscillations were smaller than the observed data (Figure 2a).
+		The finer resolution matches the large oscillations of the observed data more closely (Figure 2b).
+		
+		Table X shows the evaluation results for the three stations outside of Metro Manila: Baguio, Clark, and Cubi Point.
+		For Baguio, both CNRM-CM5 runs and the EIN15 run with 16 km resolution showed poor results.
+		This may be because of the elevation of the city.
+		Baguio is situated about 1,500 m above sea level.
+		Also, while the other stations have roughly the same elevation in its surroundings, Baguio’s surroundings have varying elevation, which can affect the simulation.
+		The results also show that the 8 km runs have a lower MB, MAE, and RMSE, as well as a higher IOA, than the 16 km runs.
+		For Clark, the two EIN15 runs have evaluation statistics that match the recommended values.
+		Furthermore, the two runs show the highest IOA values among all the runs, with a value of $0.90$ for the 16 km run and $0.91$ for the 8 km run.
+		The two CNRM-CM5 runs in Clark both have MB and RMSE values that pass the benchmark, but have MAE and IOA values that do not.
+		For Cubi Point, the two EIN15 runs both show good results among all the metrics, except for the IOA.
+		The IOA value decreased as the horizontal resolution increased. This may be because Cubi Point is a bay area. 
+		The nearby water can play a part with the station’s air temperature, which the simulation settings may not have accounted for.
+		With the lower resolution, the interaction with water may have been negligible enough as to not affect settings, but the higher resolution gives more grid cells over water, which is perhaps why the accuracy worsened.
+		The two CNRM-CM5 runs also show a low IOA, indicating inaccurate values for this station.
+		
+		Out of the four runs, the run using EIN15 with 8 km resolution performs the best.
+		The IOA values for each station, except Cubi Point, matches the recommended values of $> 0.8$.
+		This means that simulations using these settings are accurate for the places studied, and can be used for future research.
+		One limitation of EIN15 is that it is not compatible for forecasts, only hindcasts. Studies of future trends will need to use another ICBC such as CNRM-CM5, which is  a general climate model that does support forecasting.
+		
+		It can be seen that in general, increasing the horizontal resolution of the simulation will show better performance statistics.
+		One trade-off though in using a higher horizontal resolution is that it can slow down the time it takes for the simulation to finish, as the simulation needs more grid cells.
+		Also, for a given horizontal resolution, the EIN15 run performed more accurately compared to the CNRM-CM5 run. 
+		This shows that runs using CNRM-CM5 need a higher horizontal resolution than EIN15 in order to perform accurately.
+		
+		One limitation of this study is that it only studies one variable, namely: near-surface air temperature.
+		It does not examine ground temperature or temperature at different elevations.
+		It also does not examine other factors that may be relevant to the study of urban heat islands, such as humidity, wind speed, wind direction, or precipitation. 
+		Another limitation is that this study only examines the three-year period from 2015 to 2017.
+		Future studies may choose to study these other variables or study longer timeframes.
+		
+		There are many factors that can affect the findings. 
+		Firstly, the physics schemes used in this run are all the default schemes, with the exception of the Community Land Model version 4.5 being chosen over the default BATS1e. 
+		These runs do not use other models such as a lake model or a chemistry model, which may make the simulations more accurate and is an avenue for future research.
+		Next, simulations are compared to the weather station data from the ISD.
+		Only six stations were considered in this study.
+		The data will be as accurate as the instruments used to record the data.
+		Lastly, the study only used one domain.
+		Changing the size and location of the domain without tweaking other settings can change the accuracy of the simulation.
+		
+		
+		
+		
+		
+		
