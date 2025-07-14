@@ -4,18 +4,14 @@
 % Merge section on Simulation evaluation and data analysis?
 % You can maybe divide the method into two parts: a Hindcast section and a Forecast section
 
-\section{Areas of Study}
-	Luzon is the largest island in the Philippines.
-	This study analyzed six cities situated in Luzon:
-		Angeles,
-		Baguio,
-		Manila,
-		Olongapo,
-		Pasay,
-		and
-		Quezon.
-	These cities were chosen because they are all highly-urbanized cities with weather data available from the Integrated Surface Dataset.
-	A partial map of Luzon can be seen in Figure \ref{fig:map-of-metro-manila}.
+\section{Overview of Methodology}
+	The methodology consists of two parts:
+		the first part is a hindcast simulation,
+		and the second part is a forecast simulation.
+	For the first part, multiple sensitivity simulations were performed in order to see which settings are most accurate for forecasting.
+	The output of the sensitivity simulations were compared to observed weather data in order to assess their accuracy.
+	For the second part, a simulation of the future was performed. Analysis of this simulation was done to observe the trends in near-surface air temperature.
+	A flowchart of the methodology is provided in Figure X.
 
 %	This study will be conducted over Metro Manila, Philippines.
 %	Metro Manila, formally known as the National Capital Region, is the capital region of the Philippines.
@@ -80,12 +76,7 @@
 	\end{table}
 
 	A figure of the domain can be seen in Fig X.
-	This study conducted simulations over two periods: a present period and a future period.
-	For the present period, this study conducted simulations of Luzon over a four-year period, starting from 2014, January 2 up to 2018, January 1.
-	The first year was considered as spin-up time and was ignored.
-	Thus, only the three-year simulation period from 2015, January 1 to 2018, January 1 was considered for the data analysis.
-	The simulation is set to output the results every 3 hours.
-	The results of this simulation was compared to real meteorological data in order to determine the performance of the simulation.
+	
 	After the simulation has been evaluated to perform well, the second simulation was run.
 	The second simulation was conducted from 2026 to 2030 to study the future.
 	
@@ -94,7 +85,25 @@
 	For the land surface model, the Community Land Model version 4.5 was chosen over the default, the Biosphere-Atmosphere Transfer Scheme. 
 	The Community Land Model has a model for urban energy balance and climate, which the default model lacks.
 	
-\section{Simulation Evaluation}
+	\subsection{Areas of Study}
+		Luzon is the largest island in the Philippines.
+		This study analyzed six cities situated in Luzon:
+		Angeles,
+		Baguio,
+		Manila,
+		Olongapo,
+		Pasay,
+		and
+		Quezon.
+		These cities were chosen because they are all highly-urbanized cities with weather data available from the Integrated Surface Dataset.
+		A partial map of Luzon can be seen in Figure \ref{fig:map-of-metro-manila}.
+	
+\section{Hindcast Simulations}
+	For the present period, this study conducted simulations of Luzon over a four-year period, starting from 2014, January 2 up to 2018, January 1.
+	The first year was considered as spin-up time and was ignored.
+	Thus, only the three-year simulation period from 2015, January 1 to 2018, January 1 was considered for the data analysis.
+	The simulation is set to output the results every 3 hours.
+	
 	To determine the performance of the simulation, an evaluation was performed. The evaluation procedure was adapted from \textcite{Bilang2022}.
 	The results of the simulation was compared to real data from the Integrated Surface Database (ISD).
 	The ISD is maintained by the United States National Oceanic and Atmospheric Administration, and is readily available on their website 
@@ -194,6 +203,9 @@
 			\hline
 		\end{tabular}		
 	\end{table}
+
+\section{Forecast Simulation}
+	A forecast simulation was done using the settings from the best-performing sensitivity run.
 
 \section{Data Graphing and Analysis}
 	The results of the simulations were graphed.
