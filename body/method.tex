@@ -74,8 +74,6 @@
 			\hline
 		\end{tabular}		
 	\end{table}
-
-	A figure of the domain can be seen in Fig X.
 	
 	After the simulation has been evaluated to perform well, the second simulation was run.
 	The second simulation was conducted from 2026 to 2030 to study the future.
@@ -85,7 +83,7 @@
 	For the land surface model, the Community Land Model version 4.5 was chosen over the default, the Biosphere-Atmosphere Transfer Scheme. 
 	The Community Land Model has a model for urban energy balance and climate, which the default model lacks.
 	
-	\subsection{Areas of Study}
+	\subsection{Domain of Study}
 		Luzon is the largest island in the Philippines.
 		This study analyzed six cities situated in Luzon:
 		Angeles,
@@ -97,6 +95,23 @@
 		Quezon.
 		These cities were chosen because they are all highly-urbanized cities with weather data available from the Integrated Surface Dataset.
 		A partial map of Luzon can be seen in Figure \ref{fig:map-of-metro-manila}.
+		
+		The domain of the simulation can be seen in Figure \ref{fig:domain-luzon}.
+		The center is placed at a longitude of 121◦ and a latitude of 15.5◦.
+		This domain was chosen such that each of the chosen cities are away from the domain boundaries,
+		This domain is used for both the hindcast and the forecast.
+		
+		\begin{figure}
+			\centering
+			\includegraphics{domain-luzon.png}
+			\caption{
+				The domain of the run, Luzon.
+				Color represents elevation in meters.
+				Places marked with a diamond are the selected cities to be studied (listed in Table \ref{tab:isd-stations}).
+			}
+			\label{fig:domain-luzon}
+		\end{figure}	
+		
 	
 \section{Hindcast Simulations}
 	For the present period, this study conducted simulations of Luzon over a four-year period, starting from 2014, January 2 up to 2018, January 1.
