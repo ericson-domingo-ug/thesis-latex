@@ -10,7 +10,7 @@
 		
 		\begin{table}[]
 			\caption{Evaluation results for the three cities inside Metro Manila. Values that do not match the recommended values are colored in red.}
-			\label{tab:results-evaluation-inside-manila}
+			\label{tab:results-evaluation-inside-mm}
 			\centering
 			\begin{tabular}{lrSSSS}
 				\hline \hline
@@ -49,6 +49,33 @@
 		The nearby water can play a part with the station’s air temperature, which the simulation settings may not have accounted for.
 		With the lower resolution, the interaction with water may have been negligible enough as to not affect settings, but the higher resolution gives more grid cells over water, which is perhaps why the accuracy worsened.
 		The two CNRM-CM5 runs also show a low IOA, indicating inaccurate values for this station.
+	
+		\begin{table}[]
+			\caption{Evaluation results for the three cities inside Metro Manila. Values that do not match the recommended values are colored in red.}
+			\label{tab:results-evaluation-outside-mm}
+			\centering
+			\begin{tabular}{lrSSSS}
+				\hline \hline
+				ICBC     & \multicolumn{1}{c}{ds [\unit{km}]} & {MB [\unit{\degreeCelsius}]} & {MAE [\unit{\degreeCelsius}]}                          & {RMSE [\unit{\degreeCelsius}]} & {IOA}                               \\
+				\hline
+				\multicolumn{6}{c}{\textit{Baguio}}                                                                                                                                                    \\
+				EIN15    & 16                          & \color{red} 2.48 & \color{red}  2.60  & 3.08                              & \color{red}  0.76  \\
+				EIN15    & 8                           & 1.49                              & 1.91                              & 2.33                              & 0.84                              \\
+				CNRM-CM5 & 16                          & \color{red}  8.77  & \color{red}  8.77  & \color{red}  9.10  & \color{red}  0.32  \\
+				CNRM-CM5 & 8                           & 0.60                              & \color{red}  2.05  & 2.62                              & \color{red}  0.79  \\
+				\multicolumn{6}{c}{\textit{Clark International Airport, Angeles}}                                                                                                                      \\
+				EIN15    & 16                          & -0.48                             & 1.47                              & 1.83                              & 0.90                              \\
+				EIN15    & 8                           & -0.64                             & 1.48                              & 1.87                              & 0.91                              \\
+				CNRM-CM5 & 16                          & 0.41                              & \color{red}  2.42  & 2.84                              & \color{red}  0.45  \\
+				CNRM-CM5 & 8                           & -1.98                             & \color{red}  2.59  & 3.13                              & \color{red}  0.76  \\
+				\multicolumn{6}{c}{\textit{Cubi Point, Olongapo}}                                                                                                                                      \\
+				EIN15    & 16                          & -1.52                             & 1.80                              & 2.16                              & 0.85                              \\
+				EIN15    & 8                           & -0.55                             & 1.55                              & 1.95                              & \color{red}  0.78  \\
+				CNRM-CM5 & 16                          & 0.06                              & \color{red}  2.18  & 2.63                              & \color{red}  0.44  \\
+				CNRM-CM5 & 8                           & -1.21                             & 1.98                              & 2.51                              & \color{red}  0.67 \\
+				\hline
+			\end{tabular}
+		\end{table}
 		
 		Out of the four runs, the run using EIN15 with 8 km resolution performs the best.
 		The IOA values for each station, except Cubi Point, matches the recommended values of $> 0.8$.
