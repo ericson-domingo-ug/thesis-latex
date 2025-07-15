@@ -224,6 +224,23 @@
 		RegCM employs a number of physics models which solve a set of dynamical equations describing earth processes.
 		These include radiation, convection, turbulent diffusion, moisture, and energy flux exchanges with surface.
 		
+		These dynamical equations are solved by discretizing. Computed variables are placed on a three-dimensional grid, which can be seen in Figure \ref{fig:regcm-grids}.
+		The vertical coordinates of the three-dimensional grid near the ground follow the terrain topology. 
+		As the vertical coordinate goes higher, the level slices become flatter.
+		The horizontal grids have uniform spacing.
+		\begin{figure}	
+			\centering
+			\includegraphics[width = \textwidth]{regcm-grids}
+			\caption{
+				Vertical and horizontal grid systems used by the MOLOCH dynamical core implemented in RegCM5.
+				(a) Terrain following vertical levels and their relationship with atmospheric heights, showing the staggering of the vertical wind (dashed half levels) with respect to the other model status variables (continuous full levels), along with the boundary conditions at the atmosphere top and bottom;
+				(b) horizontal staggered Arakawa-C grid.
+				Scalar variables are defined at the red X grid points, while the zonal U wind component is defined at the green grid points and the meridional V wind component at the blue grid points.
+				Taken from \textcite{Giorgi2023}.
+			}
+			\label{fig:regcm-grids}
+		\end{figure}
+		
 		
 			
 
