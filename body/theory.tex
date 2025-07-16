@@ -219,6 +219,40 @@
 				The \texttt{icbc} program will use this dataset in order to create the initial conditions and boundary conditions needed by RegCM to run the simulations.
 		\end{enumerate}
 		The ICTP maintains an online public repository of datasets for use with RegCM (\url{http://clima-dods.ictp.it/regcm4}).
+		
+		\begin{table}[]
+			\caption{
+				Surface data required for the Community Land Model and their base spatial resolution.
+				Taken from \textcite{Oleson2013}.
+			}
+			\label{tab:surface-data-clm}
+			\centering
+			\begin{tabular}{ll}
+				\hline \hline
+				Surface Field & Resolution                      \\
+				\hline
+				Percent glacier & 0.05°                         \\
+				Percent lake and lake depth & 0.05°             \\
+				Percent urban & 0.05°                           \\
+				Percent plant functional types (PFTs) & 0.05°   \\
+				Monthly leaf and stem area index & 0.5°         \\
+				Canopy height (top, bottom) & 0.5°              \\
+				Soil color & 0.5°                               \\
+				Percent sand, percent clay & 0.083°                           \\
+				Soil organic matter density & 0.083°            \\
+				Maximum fractional saturated area & 0.125°      \\
+				Elevation & 1 km                                 \\
+				Slope & 1 km                                     \\
+				Biogenic Volatile Organic Compounds & 0.5°      \\
+				Crop Irrigation & 0.083°                        \\
+				Managed crops & 0.5°                            \\
+				Population density & 0.5°                       \\
+				Gross domestic production & 0.5°                \\
+				Peat area fraction & 0.5°                       \\
+				Peak month of agricultural waste burning & 0.5° \\
+				\hline
+			\end{tabular}
+		\end{table}
 	
 	\subsection{Physics Models}
 		RegCM employs a number of physics models which solve a set of dynamical equations describing earth processes.
