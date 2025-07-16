@@ -276,7 +276,46 @@
 			\label{fig:regcm-grids}
 		\end{figure}
 		
-		
+		\begin{figure}	
+			\centering
+			\includegraphics[width = \textwidth]{clm-urban-land-unit}
+			\caption{
+				Schematic representation of the urban land unit in the Community Land Model.
+				Incident, reflected, and net solar and longwave radiation are calculated for each individual surface but are not shown for clarity.
+				Taken from \textcite{Oleson2013}.
+			}
+			\label{fig:clm-urban-land-unit}
+		\end{figure}
+	
+		\begin{figure}	
+			\centering
+			\includegraphics[width = \textwidth]{clm-atmospheric-urban-coupling}
+			\caption{
+				Schematic of urban and atmospheric model coupling.
+				The urban model is forced by 
+					the atmospheric model wind ($u_{atm}$ ), 
+					temperature ($T_{atm}$), 
+					specific humidity ($q_{atm}$),
+					precipitation ($P_{atm}$), 
+					solar($S_{atm} \downarrow$), 
+					and longwave ($L_{atm} \downarrow$) radiation 
+					at reference height $z'_{atm}$.
+				Fluxes from the urban landunit to the atmosphere are 
+					turbulent sensible ($H$) 
+					and latent heat ($\lambda E$), 
+					momentum ($\tau$), 
+					albedo ($I \uparrow$), 
+					emitted longwave ($L \uparrow$), and 
+					absorbed shortwave ($\vec{S}$) radiation. 
+				Air temperature ($T_{ac}$), 
+					specific humidity ($q_{ac}$), 
+					and wind speed ($u_c$)
+					within the urban canopy layer are diagnosed by the urban model.
+				$H$ is the average building height.
+				Taken from \textcite{Oleson2013}.
+			}
+			\label{fig:clm-atmospheric-urban-coupling}
+		\end{figure}	
 			
 
 	
