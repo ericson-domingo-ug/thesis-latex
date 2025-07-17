@@ -118,7 +118,15 @@
 	The first year was considered as spin-up time and was ignored.
 	Thus, only the three-year simulation period from 2015, January 1 to 2018, January 1 was considered for the data analysis.
 	The simulation is set to output the results every 3 hours.
-	
+	Four sensitivity simulations were run:
+	The first two simulations used the EIN15 dataset, a global
+	atmospheric reanalysis by the European Centre for
+	Medium-Range Weather Forecasts and described in \textcite{Dee2011}, for the initial conditions and boundary
+	conditions (ICBC).
+	The first run used a horizontal resolution of 16 km (28 by 30 grid cells), while the second run had double the resolution (8 km, 59 by 56 grid cells).
+	The last two runs used the CNRM-CM5, a general circulation model as described in \textcite{Voldoire2012}, for the ICBC.
+	As with the EIN15 runs, one was run with double the resolution of the other.
+	A summary of the simulations run is in Table \ref{tab:summary-sensitivity-runs}.
 	\begin{table}[]
 		\caption{The ICBC and horizontal resolutions used for each of the four sensitivity simulations in this study.}
 		\label{tab:summary-sensitivity-runs}
