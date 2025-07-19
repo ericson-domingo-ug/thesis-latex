@@ -59,7 +59,10 @@
 		The CNRM-CM5 run with 16 km resolution had all of its performance statistics fall outside of the recommended values, and showed the lowest IOA out of all the cities and runs.
 		While the MB and RMSE of the CNRM-CM5 run with 8 km resolution are within recommended values, its MAE and IOA do not.
 		Only the EIN15 run with 8 km resolution show all performance statistics within recommended values.
-	
+		A graph of the observed data and simulation data using CNRM-CM5 for Baguio is seen in Figure \ref{fig:cnrm-sim-vs-observed-baguio}.
+		The lower resolution run overshoots the observed data by around $\qty{8}{\degreeCelsius}$, and exhibits smaller oscillating behavior compared to the observed data.
+		The higher resolution shows a closer match to the observed data, with the simulation roughly matching the trend and oscillating behavior of the observed.
+			
 		\begin{table}[]
 			\caption{Evaluation results for the three cities inside Metro Manila. Values that do not match the recommended values are colored in red.}
 			\label{tab:results-evaluation-outside-mm}
@@ -86,6 +89,16 @@
 				\hline
 			\end{tabular}
 		\end{table}
+		
+		\begin{figure}	
+			\centering
+			\includegraphics[width = \textwidth]{CNRM 16 km/Baguio}
+			\includegraphics[width = \textwidth]{CNRM 8 km/Baguio}
+			\caption{
+				A comparison of the simulated data (orange) and observed data (blue) in the city of Baguio using CNRM-CM5 with 16 km resolution (above) and 8 km resolution (below).
+			}
+			\label{fig:cnrm-sim-vs-observed-baguio}
+		\end{figure}
 		
 		From these results, Baguio is shown to be hard to accurately simulate.
 		One reason why this may be the case is because of the topology of the city.
