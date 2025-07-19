@@ -98,20 +98,22 @@
 		The two CNRM-CM5 runs in Angeles both have MB and RMSE values that pass the benchmark, but have MAE and IOA values that do not.
 		
 		For Olongapo, the two EIN15 runs both show good results among all the metrics, except for the IOA.
-		The IOA value decreased as the horizontal resolution increased. This may be because the station is located at a bay area. 
-		The nearby water can play a part with the station’s air temperature, which the simulation settings may not have accounted for.
-		With the lower resolution, the interaction with water may have been negligible enough as to not affect settings, but the higher resolution gives more grid cells over water, which is perhaps why the accuracy worsened.
 		The two CNRM-CM5 runs also show a low IOA, indicating inaccurate values for this station.
+		
+		It can be seen that in general, increasing the horizontal resolution of the simulation will increase the IOA, giving a more accurate simulation.
+		One exception to this observation is for Olongapo.
+		When going from a 16 km resolution to an 8 km resolution using EIN15, MB, MAE, and RMSE values improved, but the IOA worsened from $0.85$ to $0.78$.
+		One reason for this may be because of the station being situated by a bay.
+		The nearby water can play a part with the station’s air temperature, which the simulation settings may not have accounted for.
+		With the lower resolution, the interaction with water may have been negligible enough as to not affect settings, but the higher resolution gives more grid cells over water, which is perhaps why the accuracy worsened.		
 		
 		Out of the four runs, the run using EIN15 with 8 km resolution performs the best.
 		The IOA values for each station, except Olongapo, matches the recommended values of $> 0.8$.
 		This means that simulations using these settings are accurate for the places studied, and can be used for future research.
 		One limitation of EIN15 is that it is not compatible for forecasts, only hindcasts. Studies of future trends will need to use another ICBC such as CNRM-CM5, which is  a general climate model that does support forecasting.
-		
-		It can be seen that in general, increasing the horizontal resolution of the simulation will show better performance statistics.
 		One trade-off though in using a higher horizontal resolution is that it can slow down the time it takes for the simulation to finish, as the simulation needs more grid cells.
 		Also, for a given horizontal resolution, the EIN15 run performed more accurately compared to the CNRM-CM5 run. 
-		This shows that runs using CNRM-CM5 need a higher horizontal resolution than EIN15 in order to perform accurately.
+		This shows that runs using CNRM-CM5 need a higher horizontal resolution than EIN15 in order to exhibit the same accuracy.
 		
 		One limitation of this study is that it only studies one variable, namely: near-surface air temperature.
 		It does not examine ground temperature or temperature at different elevations.
