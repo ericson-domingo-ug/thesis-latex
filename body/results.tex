@@ -60,22 +60,6 @@
 		While the MB and RMSE of the CNRM-CM5 run with 8 km resolution are within recommended values, its MAE and IOA do not.
 		Only the EIN15 run with 8 km resolution show all performance statistics within recommended values.
 
-		From these results, Baguio is shown to be hard to accurately simulate.
-		One reason why this may be the case is because of the elevation of the city.
-		Baguio is situated about 1,500 m above sea level, unlike the other cities which are situated near sea level.
-		Another reason could be the nearby topology of Baguio.
-		While other cities have roughly the same elevation in its surroundings, Baguio’s surroundings have varying elevation, which can affect the simulation.
-		The results also show that the 8 km runs have a lower MB, MAE, and RMSE, as well as a higher IOA, than the 16 km runs.
-		
-		For Angeles, the two EIN15 runs have evaluation statistics that match the recommended values.
-		Furthermore, the two runs show the highest IOA values among all the runs, with a value of $0.90$ for the 16 km run and $0.91$ for the 8 km run.
-		The two CNRM-CM5 runs in Angeles both have MB and RMSE values that pass the benchmark, but have MAE and IOA values that do not.
-		
-		For Olongapo, the two EIN15 runs both show good results among all the metrics, except for the IOA.
-		The IOA value decreased as the horizontal resolution increased. This may be because the station is located at a bay area. 
-		The nearby water can play a part with the station’s air temperature, which the simulation settings may not have accounted for.
-		With the lower resolution, the interaction with water may have been negligible enough as to not affect settings, but the higher resolution gives more grid cells over water, which is perhaps why the accuracy worsened.
-		The two CNRM-CM5 runs also show a low IOA, indicating inaccurate values for this station.
 	
 		\begin{table}[]
 			\caption{Evaluation results for the three cities inside Metro Manila. Values that do not match the recommended values are colored in red.}
@@ -103,6 +87,23 @@
 				\hline
 			\end{tabular}
 		\end{table}
+		
+		From these results, Baguio is shown to be hard to accurately simulate.
+		One reason why this may be the case is because of the elevation of the city.
+		Baguio is situated about 1,500 m above sea level, unlike the other cities which are situated near sea level.
+		Another reason could be the nearby topology of Baguio.
+		While other cities have roughly the same elevation in its surroundings, Baguio’s surroundings have varying elevation, which can affect the simulation.
+		The results also show that the 8 km runs have a lower MB, MAE, and RMSE, as well as a higher IOA, than the 16 km runs.
+		
+		For Angeles, the two EIN15 runs have evaluation statistics that match the recommended values.
+		Furthermore, the two runs show the highest IOA values among all the runs, with a value of $0.90$ for the 16 km run and $0.91$ for the 8 km run.
+		The two CNRM-CM5 runs in Angeles both have MB and RMSE values that pass the benchmark, but have MAE and IOA values that do not.
+		
+		For Olongapo, the two EIN15 runs both show good results among all the metrics, except for the IOA.
+		The IOA value decreased as the horizontal resolution increased. This may be because the station is located at a bay area. 
+		The nearby water can play a part with the station’s air temperature, which the simulation settings may not have accounted for.
+		With the lower resolution, the interaction with water may have been negligible enough as to not affect settings, but the higher resolution gives more grid cells over water, which is perhaps why the accuracy worsened.
+		The two CNRM-CM5 runs also show a low IOA, indicating inaccurate values for this station.
 		
 		Out of the four runs, the run using EIN15 with 8 km resolution performs the best.
 		The IOA values for each station, except Olongapo, matches the recommended values of $> 0.8$.
