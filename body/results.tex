@@ -1,10 +1,10 @@
 \section{Hindcast Results}
 	\subsection{Model Evaluation}
-		Table \ref{tab:results-evaluation-inside-mm} shows the evaluation results for the three stations inside Metro Manila: Manila, NAIA, and the Science Garden. 
+		Table \ref{tab:results-evaluation-inside-mm} shows the evaluation results for the three cities inside Metro Manila: Manila, Pasay, and the Quezon. 
 		All MB and RMSE values fall within the recommended values of $\leq \pm \qty{2.0}{\degreeCelsius}$ and $\leq \qty{3.5}{\degreeCelsius}$, respectively.
 		Furthermore, all MAE values, besides the the one for the CNRM-CM5 run with 16 km horizontal resolution, fall within the recommended value of $\leq \pm \qty{2.0}{\degreeCelsius}$.
 		Despite this, many runs show an IOA value $< 0.8$, indicating a bad agreement between the simulation and observed data.
-		A graph of the simulation data and observed data for Science Garden using CNRM-CM5 can be seen in Figure X. 
+		A graph of the simulation data and observed data for Quezon using CNRM-CM5 can be seen in Figure X. 
 		With the lower grid cell resolution, the simulation was able to follow the trend of the observed data, but its oscillations were smaller than the observed data (Figure 2a).
 		The finer resolution matches the large oscillations of the observed data more closely (Figure 2b).
 		
@@ -21,12 +21,12 @@
 				EIN15    & 8                           & 0.90    & 1.45                              & 1.84      & 0.85                              \\
 				CNRM-CM5 & 16                          & -0.73   & 1.63                              & 2.09      & \color{red}0.57 \\
 				CNRM-CM5 & 8                           & -0.38   & 1.87                              & 2.33      & \color{red}0.75 \\
-				\multicolumn{6}{c}{\textit{Ninoy Aquino International Airport, Pasay}}                                                               \\
+				\multicolumn{6}{c}{\textit{Pasay}}                                                               \\
 				EIN15    & 16                          & -0.59   & 1.24                              & 1.55      & 0.88                              \\
 				EIN15    & 8                           & 0.94    & 1.40                              & 1.75      & 0.88                              \\
 				CNRM-CM5 & 16                          & -0.72   & 1.87                              & 2.39      & \color{red} 0.52 \\
 				CNRM-CM5 & 8                           & -0.37   & 1.78                              & 2.22      & \color{red} 0.79 \\
-				\multicolumn{6}{c}{\textit{Science Garden, Quezon}}                                                                                  \\
+				\multicolumn{6}{c}{\textit{Quezon}}                                                                                  \\
 				EIN15    & 16                          & -0.61   & 1.45                              & 1.81      & 0.88                              \\
 				EIN15    & 8                           & 0.57    & 1.33                              & 1.70      & 0.91                              \\
 				CNRM-CM5 & 16                          & -0.10   & \color{red} 2.29 & 2.77      & \color{red} 0.46 \\
@@ -35,17 +35,17 @@
 			\end{tabular}
 		\end{table}
 		
-		Table \ref{tab:results-evaluation-outside-mm} shows the evaluation results for the three stations outside of Metro Manila: Baguio, Clark, and Cubi Point.
+		Table \ref{tab:results-evaluation-outside-mm} shows the evaluation results for the three cities outside of Metro Manila: Baguio, Angeles, and Olongapo.
 		For Baguio, both CNRM-CM5 runs and the EIN15 run with 16 km resolution showed poor results.
 		This may be because of the elevation of the city.
 		Baguio is situated about 1,500 m above sea level.
 		Also, while the other stations have roughly the same elevation in its surroundings, Baguio’s surroundings have varying elevation, which can affect the simulation.
 		The results also show that the 8 km runs have a lower MB, MAE, and RMSE, as well as a higher IOA, than the 16 km runs.
-		For Clark, the two EIN15 runs have evaluation statistics that match the recommended values.
+		For Angeles, the two EIN15 runs have evaluation statistics that match the recommended values.
 		Furthermore, the two runs show the highest IOA values among all the runs, with a value of $0.90$ for the 16 km run and $0.91$ for the 8 km run.
-		The two CNRM-CM5 runs in Clark both have MB and RMSE values that pass the benchmark, but have MAE and IOA values that do not.
-		For Cubi Point, the two EIN15 runs both show good results among all the metrics, except for the IOA.
-		The IOA value decreased as the horizontal resolution increased. This may be because Cubi Point is a bay area. 
+		The two CNRM-CM5 runs in Angeles both have MB and RMSE values that pass the benchmark, but have MAE and IOA values that do not.
+		For Olongapo, the two EIN15 runs both show good results among all the metrics, except for the IOA.
+		The IOA value decreased as the horizontal resolution increased. This may be because the station is located at a bay area. 
 		The nearby water can play a part with the station’s air temperature, which the simulation settings may not have accounted for.
 		With the lower resolution, the interaction with water may have been negligible enough as to not affect settings, but the higher resolution gives more grid cells over water, which is perhaps why the accuracy worsened.
 		The two CNRM-CM5 runs also show a low IOA, indicating inaccurate values for this station.
@@ -63,12 +63,12 @@
 				EIN15    & 8                           & 1.49                              & 1.91                              & 2.33                              & 0.84                              \\
 				CNRM-CM5 & 16                          & \color{red}  8.77  & \color{red}  8.77  & \color{red}  9.10  & \color{red}  0.32  \\
 				CNRM-CM5 & 8                           & 0.60                              & \color{red}  2.05  & 2.62                              & \color{red}  0.79  \\
-				\multicolumn{6}{c}{\textit{Clark International Airport, Angeles}}                                                                                                                      \\
+				\multicolumn{6}{c}{\textit{Angeles}}                                                                                                                      \\
 				EIN15    & 16                          & -0.48                             & 1.47                              & 1.83                              & 0.90                              \\
 				EIN15    & 8                           & -0.64                             & 1.48                              & 1.87                              & 0.91                              \\
 				CNRM-CM5 & 16                          & 0.41                              & \color{red}  2.42  & 2.84                              & \color{red}  0.45  \\
 				CNRM-CM5 & 8                           & -1.98                             & \color{red}  2.59  & 3.13                              & \color{red}  0.76  \\
-				\multicolumn{6}{c}{\textit{Cubi Point, Olongapo}}                                                                                                                                      \\
+				\multicolumn{6}{c}{\textit{Olongapo}}                                                                                                                                      \\
 				EIN15    & 16                          & -1.52                             & 1.80                              & 2.16                              & 0.85                              \\
 				EIN15    & 8                           & -0.55                             & 1.55                              & 1.95                              & \color{red}  0.78  \\
 				CNRM-CM5 & 16                          & 0.06                              & \color{red}  2.18  & 2.63                              & \color{red}  0.44  \\
@@ -78,7 +78,7 @@
 		\end{table}
 		
 		Out of the four runs, the run using EIN15 with 8 km resolution performs the best.
-		The IOA values for each station, except Cubi Point, matches the recommended values of $> 0.8$.
+		The IOA values for each station, except Olongapo, matches the recommended values of $> 0.8$.
 		This means that simulations using these settings are accurate for the places studied, and can be used for future research.
 		One limitation of EIN15 is that it is not compatible for forecasts, only hindcasts. Studies of future trends will need to use another ICBC such as CNRM-CM5, which is  a general climate model that does support forecasting.
 		
