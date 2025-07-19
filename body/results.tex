@@ -1,9 +1,10 @@
 \section{Hindcast Results}
 	\subsection{Model Evaluation}
-		Table \ref{tab:results-evaluation-inside-mm} shows the evaluation results for the three cities inside Metro Manila: Manila, Pasay, and the Quezon. 
+		Table \ref{tab:results-evaluation-inside-mm} shows the evaluation results for the three cities inside Metro Manila: Manila, Pasay, and Quezon.
 		All MB and RMSE values fall within the recommended values of $\leq \pm \qty{2.0}{\degreeCelsius}$ and $\leq \qty{3.5}{\degreeCelsius}$, respectively.
-		Furthermore, all MAE values, besides the the one for the CNRM-CM5 run with 16 km horizontal resolution, fall within the recommended value of $\leq \pm \qty{2.0}{\degreeCelsius}$.
-		Despite this, many runs show an IOA value $< 0.8$, indicating a bad agreement between the simulation and observed data.
+		This shows that these simulations correctly follow the average air temperature for these respective cities.
+		Despite this, many runs show an IOA value $< 0.8$, indicating that these runs show bad agreement between the simulation and observed data.
+		While these runs may follow the average trend for air temperature in these cities, it may not be capturing the details of how the temperature changes.
 		
 		\begin{table}[]
 			\caption{Evaluation results for the three cities inside Metro Manila. Values that do not match the recommended values are colored in red.}
@@ -32,9 +33,15 @@
 			\end{tabular}
 		\end{table}
 		
+		For the MAE, the CNRM-CM5 run with 16 km horizontal resolution has a value of $2.29$ in Quezon, which does not fall within the recommended value of $\leq \pm \qty{2.0}{\degreeCelsius}$.
+		All other MAE values for runs in Manila, Pasay, and Quezon fall within the recommended value.
+		The same run also exhibits the lowest IOA value of $0.46$, indicating that this run exhibits the poorest agreement between the simulation and observed data.
 		A graph of the simulation data and observed data for Quezon using CNRM-CM5 can be seen in Figure \ref{fig:cnrm-sim-vs-observed-quezon}. 
-		With the lower grid cell resolution, the simulation was able to follow the trend of the observed data, but its oscillations were smaller than the observed data (Figure 2a).
-		The finer resolution matches the large oscillations of the observed data more closely (Figure 2b).
+		The simulation with the lower grid cell resolution was able to follow the average trend of the observed data, but its oscillations were much smaller than the observed data.
+		The simulation with the finer resolution matches the large oscillations of the observed data more closely (Figure 2b).
+		This may indicate that the high MAE is due to the failure of that run to replicate the oscillations of the observed data.
+		More graphs comparing the simulated and observed data for Manila, Quezon, and Pasay are found in Appendix \ref{app:model-evaluation-graphs}.
+
 		
 		\begin{figure}	
 			\centering
