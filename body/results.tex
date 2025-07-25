@@ -143,7 +143,7 @@
 
 	\subsection{Analysis}
 		For these analyses, Olongapo is excluded from the analysis as it shown in the previous subsection to not be accurate to the observed data.
-		Figure \ref{fig:hindcast-yearly-stats} shows graphs of the yearly minimum, maximum, and mean near-surface air temperature.		
+		Figure \ref{fig:hindcast-yearly-mean} shows a line graph  of the yearly mean near-surface air temperature.		
 		Pasay has the highest yearly mean temperature per month, with Manila as the second highest.
 		Both Pasay and Manila have almost the same mean near-surface air temperature at around $\qtyrange{29}{30}{\degreeCelsius}$, with Manila's being slightly lower than Pasay's.
 		Quezon has the third highest temperature at around $\qty{28}{\degreeCelsius}$, 
@@ -152,25 +152,38 @@
 		
 		\begin{figure}	
 			\centering
-			\includegraphics[width = 0.45\textwidth]{hindcast/yearly-min}
-			\includegraphics[width = 0.45\textwidth]{hindcast/yearly-max}
 			\includegraphics[width = 0.45\textwidth]{hindcast/yearly-mean}
 			\caption{
-				The simulated yearly minimum, maximum, and mean air temperature for each of the six cities (EIN15 initial with 8 km resolution).
+				The simulated yearly mean near-surface air temperature for each of the six cities (EIN15 ICBC with 8 km horizontal resolution).
 			}
-			\label{fig:hindcast-yearly-stats}
+			\label{fig:hindcast-yearly-mean}
 		\end{figure}
 
-		The year 2014 has the lowest mean near-surface air temperature, and 2016 has the highest out of all the simulated years.
-		These years correspond to the effects of the El Niño-Southern Oscillation effects.
+		For all cities, the year 2014 has the lowest yearly mean air temperature.
+		The air temperature then rises for the years 2015 and 2016,
+			lowers for the year 2017,
+			before rising again in the year 2018,
+				except for Baguio which lowers.
+		One reason for this may be because of El Niño-Southern Oscillation effects.
 		The years of El Niño-Southern Oscillation effects are as follows:
-			%TODO: add 2012 to 2013, and 2013 to 2014.
+			2012 to 2013 and 2013 to 2014 correspond to a neutral year,
 			2014 to 2015 corresponds to a weak El Niño,
-			2015 to 2016 corresponds to a strong El Niño,
+			2015 to 2016 corresponds to a very strong El Niño,
 			2016 to 2017 corresponds to a weak La Niña,
 			and
 			2017 to 2018 also corresponds to a weak La Niña
 			(\cite{Null2025}).
+		Since 2016 is a year of very strong El Niño effects, the mean temperature of that year is heightened for all cities analyzed.
+
+		\begin{figure}	
+			\centering
+			\includegraphics[width = 0.45\textwidth]{hindcast/yearly-max}
+			\includegraphics[width = 0.45\textwidth]{hindcast/yearly-mean}
+			\caption{
+				The simulated yearly minimum and maximum near-surface air temperature for each of the six cities (EIN15 ICBC with 8 km horizontal resolution).
+			}
+			\label{fig:hindcast-yearly-min-max}
+		\end{figure}
 
 		\begin{figure}	
 			\centering
