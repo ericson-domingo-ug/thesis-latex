@@ -350,6 +350,15 @@
 		Table \ref{tab:evaluation-sarima-parameters} shows the evaluation results of various SARIMA parameters.
 		Models without a seasonal order show a higher AIC, MAE, and RMSE compared to models that do.
 		Out of all tested models, the $\operatorname{SARIMA}(4,1,2)(1,1,1,12)$ model exhibits the least AIC, MAE, and RMSE values, which indicate that this is the best-performing model out of all the models tested. Figure \ref{fig:sarima-best-training-testing} shows a graph of this model over testing and training data.
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=\textwidth]{SARIMA/forecast}
+			\caption{
+				Forecast of near-surface air temperature in degrees Celsius using $\operatorname{SARIMA}(4,1,2)(1,1,1,12)$.
+			}
+			\label{fig:sarima-forecast}
+		\end{figure}
 
 \section{Limitations}
 	One limitation of this study is that it only studies one variable, namely: near-surface air temperature.
