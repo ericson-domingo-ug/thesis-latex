@@ -294,6 +294,31 @@
 \section{Forecast}
 	\subsection{SARIMA}
 	
+		\begin{table}[]
+			\label{tab:evaluation-sarima-parameters}
+			\centering
+			\caption{
+				Evaluation results of various SARIMA parameters:
+				Akaike information criterion (AIC),
+				mean bias (MB),
+				mean absolute error (MAE),
+				and
+				root mean square error (RMSE).
+				Bolded parameters are best-performing out of all listed.
+			}
+			\begin{tabular}{ccSSSS}
+				\hline \hline
+				{Order (p, d, q)} & {Seasonal Order (P, D, Q, S)} & {AIC}  & {MB}     & {MAE}   & {RMSE}  \\
+				\hline
+				(3, 1, 3)                           & None                                            & 126  & -0.938 & 1.00  & 1.24  \\
+				(4, 1, 2)                           & None                                            & 130  & -0.217 & 0.800 & 1.07  \\
+				(3, 1, 3)                           & (1, 1, 1, 12)                                   & 89.8 & -0.396 & 0.473 & 0.643 \\
+				\textbf{(4, 1, 2)}                  & \textbf{(1, 1, 1, 12)}                          & 88.6 & -0.330 & 0.426 & 0.599 \\
+				(3, 1, 3)                           & (1, 1, 0, 12)                                   & 89.5 & -0.383 & 0.520 & 0.680 \\
+				(4, 1, 2)                           & (1, 1, 0, 12)                                   & 91.4 & -0.165 & 0.436 & 0.558 \\
+				\hline			
+			\end{tabular}
+		\end{table}
 
 \section{Limitations}
 	One limitation of this study is that it only studies one variable, namely: near-surface air temperature.
