@@ -293,7 +293,7 @@
 	
 \section{Forecast}
 	\subsection{SARIMA}
-		
+				
 		\begin{figure}
 			\centering
 			\includegraphics[width=\textwidth]{SARIMA/autocorrelations}
@@ -302,6 +302,14 @@
 			}
 			\label{fig:sarima-autocorrelations}
 		\end{figure}	
+		
+		Figure \ref{fig:sarima-autocorrelations} shows the autocorrelation plots for Manila.
+		For the autocorrelation plot, 
+			there are significant negative correlations at $\num{3}$ and $\num4$ lags,
+			suggesting that $p = 3$ and $p = 4$ are possible good values for the autoregressive factor.
+		For the partial autocorrelation plot,
+			there is a significant positive correlation at $\num{1}$ and $\num{2}$ lags,
+			which suggest that $q = 1$ and $q = 2$ are possible good values for the moving average factor.
 		
 		\begin{table}[]
 			\label{tab:evaluation-sarima-parameters}
