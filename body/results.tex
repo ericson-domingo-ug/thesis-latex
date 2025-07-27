@@ -359,6 +359,38 @@
 			}
 			\label{fig:sarima-forecast}
 		\end{figure}
+	
+		Figure \ref{fig:sarima-forecast} shows the forecast from the SARIMA model.
+		All cities are forecasted to have an upwards trend in air temperature, besides Baguio which is forecasted to have a downward trend.
+		The year 2030 is forecasted to have a mean temperature of 
+			$\qty{30.5}{\degreeCelsius}$ for Pasay and Manila,
+			$\qty{29.3}{\degreeCelsius}$ for Quezon,
+			and
+			$\qty{27.9}{\degreeCelsius}$ for Angeles.
+		Compared to the mean temperature in 2018, the mean temperature in 12 years is forecasted to increase to
+			$\qty{0.9}{\degreeCelsius}$ for Quezon,
+			and
+			$\qty{1.0}{\degreeCelsius}$ for Pasay, Manila, and Angeles.
+		A summary of these results is seen in Table \ref{tab:summary-temperature-increase}.
+		
+		\begin{table}[]
+			\centering
+			\caption{
+				The mean simulated near-surface air temperature in 2018, the forecasted temperature in 2030, and the increase.
+				All units in degrees Celcius.
+			}
+			\label{tab:summary-temperature-increase}
+			\begin{tabular}{rSSSS}
+				\hline \hline
+				& {Pasay} & {Quezon} & {Manila} & {Angeles} \\
+				\hline
+				2018                 & 29.5                      & 28.5                       & 29.5                       & 26.9                        \\
+				2030                 & 30.5                      & 29.4                       & 30.5                       & 27.9                        \\
+				Increase             & 1.0                       & 0.9                        & 1.0                        & 1.0 \\                       
+				\hline                        
+			\end{tabular}
+		\end{table}
+		
 
 \section{Limitations}
 	One limitation of this study is that it only studies one variable, namely: near-surface air temperature.
