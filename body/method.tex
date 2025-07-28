@@ -241,8 +241,38 @@
 		\end{tabular}		
 	\end{table}
 
-\section{Forecast Simulation}
-	A forecast simulation was done using the settings from the best-performing sensitivity run.
+\section{Forecasting}
+	For forecasting, a seasonal autoregressive integrated moving average (SARIMA) was trained on the hindcast data.
+	A forecast simulation was also done using the CNRM-CM5 dataset.
+	
+	\subsection{SARIMA}
+	
+		First, the hindcast data was resampled to monthly mean data for the purposes of training the SARIMA model.
+		The years 2013 to 2016 of the hindcast data are used for training the model, while the years 2017 to 2018 are used for testing the data.
+		The autocorrelation plots were generated in order to find possible values for parameters in the SARIMA model.
+		Various models with different SARIMA parameters are tested.
+		For each model, the MB, MAE, and RMSE (Equations \ref{eq:mean-bias} to \ref{eq:root-mean-square-error}) was calculated.
+		In addition, the Akaike information criterion (AIC) was calculated.
+		The AIC is a measure of the quality of a given model compared to other models, and is used in model selection.
+		It is given by the equation
+		\begin{equation}
+			\operatorname{AIC} = n \ln \left( 
+				\frac{\operatorname{RSS}}{n} 
+			\right) + 2K,
+			\label{eq:akaike-information-criterion}
+		\end{equation}
+		where $n$ is the number of data points,
+			$\operatorname{RSS}$ is the residual sums of squares,
+			and
+			$K$ is the number of parameters in the model
+			(\cite{Chen2018}).
+		The model with the lowest AIC was chosen as the model to forecast with.
+		
+	
+	
+	
+	
+	
 
 \section{Data Graphing and Analysis}
 	The results of the simulations were graphed.
