@@ -177,6 +177,22 @@
 
 		\begin{figure}	
 			\centering
+			\includegraphics[width= 0.49 \textwidth]{hindcast/yearly-boxplot-pasay}
+			\includegraphics[width= 0.49 \textwidth]{forecast/yearly-boxplot-pasay}
+			\includegraphics[width= 0.49 \textwidth]{hindcast/yearly-boxplot-quezon}
+			\includegraphics[width= 0.49 \textwidth]{forecast/yearly-boxplot-quezon}			
+			\includegraphics[width= 0.49 \textwidth]{hindcast/yearly-boxplot-manila}
+			\includegraphics[width= 0.49 \textwidth]{forecast/yearly-boxplot-manila}			
+			
+			
+			\caption{
+				lfjdlksjf.
+			}
+			\label{fig:yearly-boxplot-manila}
+		\end{figure}
+
+		\begin{figure}	
+			\centering
 			\includegraphics[width = 0.45\textwidth]{hindcast/yearly-min}
 			\includegraphics[width = 0.45\textwidth]{hindcast/yearly-max}
 			\caption{
@@ -234,13 +250,53 @@
 			\label{fig:hindcast-hourly-mean}
 		\end{figure}
 	
+		\begin{figure}	
+			\centering
+			\includegraphics[width= 0.49 \textwidth]{hindcast/hourly-mean-djf}		
+			\includegraphics[width= 0.49 \textwidth]{forecast/hourly-mean-djf}		
+			\caption{
+				Mean simulated near-surface air temperature each hour from December to February in the years 2015 to 2016 (left) and 2028 to 2029 (right).
+			}
+			\label{fig:hourly-mean-djf}
+		\end{figure}
+		
+		\begin{figure}	
+			\centering
+			\includegraphics[width= 0.49 \textwidth]{hindcast/hourly-mean-mam}		
+			\includegraphics[width= 0.49 \textwidth]{forecast/hourly-mean-mam}		
+			\caption{
+				Mean simulated near-surface air temperature each hour from March to May in the years 2016 (left) and 2029 (right).
+			}
+			\label{fig:hourly-mean-mam}
+		\end{figure}
+		
+		\begin{figure}	
+			\centering
+			\includegraphics[width= 0.49 \textwidth]{hindcast/hourly-mean-jja}		
+			\includegraphics[width= 0.49 \textwidth]{forecast/hourly-mean-jja}		
+			\caption{
+				Mean simulated near-surface air temperature each hour from June to August in the years 2016 (left) and 2029 (right).
+			}
+			\label{fig:hourly-mean-jja}
+		\end{figure}	
+		
+		\begin{figure}	
+			\centering
+			\includegraphics[width= 0.49 \textwidth]{hindcast/hourly-mean-son}		
+			\includegraphics[width= 0.49 \textwidth]{forecast/hourly-mean-son}		
+			\caption{
+				Mean simulated near-surface air temperature each hour from September to November in the years 2016 (left) and 2029 (right).
+			}
+			\label{fig:hourly-mean-son}
+		\end{figure}
+	
 		Figure \ref{fig:hindcast-hourly-mean} shows the diurnal mean simulated near-surface air temperature from December 2015 to November 2016, split into three-month seasons:
 			December, January, and February (DJF);
 			March, April, and May (MAM);
 			June, July, and August (JJA);
 			and
 			September, October, and November (SON).
-		In all seasons, the mean air temperature is at its lowest at 9 PM, and peaks at 6 AM for all cities except Baguio, which peaks at 3 AM.
+		In all seasons, the mean air temperature is at its lowest at 5 AM, and peaks at 2 PM for all cities except Baguio, which peaks at 11 AM.
 		The MAM season, corresponding to the Philippine's hot dry season, exhibits the highest air temperature compared to other seasons, in both daytime and nighttime.
 		The JJA and SON seasons, which correspond to the Philippine wet season, show similar diurnal temperature patterns.
 		The results for DJF, which correspond to the cool dry season, differ between cities.
@@ -249,7 +305,7 @@
 		
 		\begin{table}[]
 			\caption{
-				Mean simulated near-surface air temperature in degrees Celsius per season at 6 AM (Day), 6 PM (Night), and their difference (Diff.). Data simulated from December 2015 to November 2016.
+				Mean simulated near-surface air temperature in degrees Celsius per season at 2 PM (Day), 2 AM (Night), and their difference (Diff.). Data simulated from December 2015 to November 2016.
 			}
 			\label{tab:hindcast-difference-day-night}
 			\centering
@@ -278,7 +334,7 @@
 		\end{table}
 		
 		Table \ref{tab:hindcast-difference-day-night} shows the difference between daytime and noontime air temperature per season from December 2015 to November 2016.
-		Since the diurnal air temperature peaks at 6 AM, this hour was chosen to represent daytime, while 6 PM is chosen to represent nighttime.
+		Since the diurnal air temperature peaks at 2 PM, this hour was chosen to represent daytime, while 2 AM is chosen to represent nighttime.
 		The difference is greatest during the MAM season, and the least during JJA.
 		Pasay and Manila have the least difference between day and night temperature,
 			with a temperature of $\qty{3.9}{\degreeCelsius}$ and $\qty{3.8}{\degreeCelsius}$ during the JJA season,
