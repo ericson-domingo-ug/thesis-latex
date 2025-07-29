@@ -112,134 +112,149 @@
 		
 	
 \section{Hindcast Simulations}
-	This study first conducted sensitivity simulations of Luzon over a four-year period, starting from 2014, January 2 up to 2018, January 1.
-	The first year was considered as spin-up time and was ignored.
-	Thus, only the three-year simulation period from 2015, January 1 to 2018, January 1 was considered for the data analysis.
-	The simulation is set to output the results every 3 hours.
-	Four sensitivity simulations were run:
-	The first two simulations used the EIN15 dataset, a global
-	atmospheric reanalysis by the European Centre for
-	Medium-Range Weather Forecasts and described in \textcite{Dee2011}, for the initial conditions and boundary
-	conditions (ICBC).
-	The first run used a horizontal resolution of 16 km (28 by 30 grid cells), while the second run had double the resolution (8 km, 59 by 56 grid cells).
-	The last two runs used the CNRM-CM5, a general circulation model as described in \textcite{Voldoire2012}, for the ICBC.
-	As with the EIN15 runs, one was run with double the resolution of the other.
-	A summary of the simulations run is in Table \ref{tab:summary-sensitivity-runs}.
-	\begin{table}[]
-		\caption{The ICBC and horizontal resolutions used for each of the four sensitivity simulations in this study.}
-		\label{tab:summary-sensitivity-runs}
-		\centering
-		\begin{tabular}{ll}
-			\hline \hline 
-			ICBC Dataset & Horizontal resolution \\
-			\hline
-			EIN15 & 16 km (28 $\times$ 30 grid cells) \\
-			EIN15 & 8 km (59 $\times$ 56 grid cells) \\
-			CNRM-CM5 & 16 km (28 $\times$ 30 grid cells) \\
-			CNRM-CM5 & 16 km (59 $\times$ 56 grid cells) \\
-			\hline
-		\end{tabular}
-	\end{table}
+	The first part of this study conducted hindcast simulations.
+	First, sensitivity runs were conducted in order to determine which dataset and at which resolution to use in order to get accurate results.
+	Then, the chosen simulation was run again to simulate more years, and then analyzed.
 	
-	To determine the performance of the sensitivity simulation, an evaluation was performed. The evaluation procedure was adapted from \textcite{Bilang2022}.
-	The results of the simulation was compared to real data from the Integrated Surface Database (ISD).
-	The ISD is maintained by the United States National Oceanic and Atmospheric Administration, and is readily available on their website 
-		(\url{https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database}).
-	Data points missing from the data set were handled by replacing them with the mean of the data.
-	The areas of study as well as their corresponding stations to be used in the evaluation are listed in Table \ref{tab:isd-stations}.
-
-	\begin{table}	
-		\caption{Areas of study and their corresponding stations in the Integrated Surface Dataset (ISD).}
-		\label{tab:isd-stations}
-		\centering
-		\begin{tabular}{lll}
-			\hline \hline
-			& Area of Study             & ISD Station Name                       \\
-			\hline
-			1 & Angeles, Pampanga         & Clark International Airport        \\
-			2 & Baguio, Benguet           & Baguio                             \\
-			3 & Manila, Metro Manila      & Manila                             \\
-			4 & Olongapo, Zambales        & Cubi Point                         \\
-			5 & Pasay, Metro Manila      & Ninoy Aquino International Airport \\
-			6 & Quezon City, Metro Manila & Science Garden \\                   
-			\hline
-		\end{tabular}	
-	\end{table}
-
-	Four performance statistics were computed using equations \ref{eq:mean-bias} to \ref{eq:y-bar},
-		where $y_i$ is the modeled value, $y_{i,\text{obs}}$ is the observed value, and $N$ is the number of data points (\cite{Bilang2022}).
-	The mean bias (MB) is a measure of the model to overestimate or underestimate a variable (\cite{Carbonell2013}), and is calculated by
-	\begin{equation}
-		\text{MB} =
-			\frac{1}{N}
-			\sum_{i=1}^{N}
-			(y_i - y_{i,\text{obs}}).
-			\label{eq:mean-bias}
-	\end{equation}
-	The mean absolute error (MAE) is used to measure the closeness of the modeled and observed values (\cite{Arasa2016}).
-	It is calculated by
-	\begin{equation}
-		\text{MAE} =
-			\frac{1}{N}
-			\sum_{i=1}^{N} 
-			|y_i - y_{i,\text{obs}}|. \label{eq:mean-absolute-error}
-	\end{equation}
-	The root mean square error (RMSE) is similar to the MAE but more sensitive to large errors due to the squared term (\cite{Carbonell2013}).
-	It is calculated by
-	\begin{equation}
-		\text{RMSE} =
-		\sqrt{
-			\frac{
+	\subsection{Model Evaluation}
+		This study first conducted sensitivity simulations of Luzon over a four-year period, starting from 2014, January 2 up to 2018, January 1.
+		The first year was considered as spin-up time and was ignored.
+		Thus, only the three-year simulation period from 2015, January 1 to 2018, January 1 was considered for the data analysis.
+		The simulation is set to output the results every 3 hours.
+		Four sensitivity simulations were run:
+		The first two simulations used the EIN15 dataset, a global
+		atmospheric reanalysis by the European Centre for
+		Medium-Range Weather Forecasts and described in \textcite{Dee2011}, for the initial conditions and boundary
+		conditions (ICBC).
+		The first run used a horizontal resolution of 16 km (28 by 30 grid cells), while the second run had double the resolution (8 km, 59 by 56 grid cells).
+		The last two runs used the CNRM-CM5, a general circulation model as described in \textcite{Voldoire2012}, for the ICBC.
+		As with the EIN15 runs, one was run with double the resolution of the other.
+		A summary of the simulations run is in Table \ref{tab:summary-sensitivity-runs}.
+		\begin{table}[]
+			\caption{The ICBC and horizontal resolutions used for each of the four sensitivity simulations in this study.}
+			\label{tab:summary-sensitivity-runs}
+			\centering
+			\begin{tabular}{ll}
+				\hline \hline 
+				ICBC Dataset & Horizontal resolution \\
+				\hline
+				EIN15 & 16 km (28 $\times$ 30 grid cells) \\
+				EIN15 & 8 km (59 $\times$ 56 grid cells) \\
+				CNRM-CM5 & 16 km (28 $\times$ 30 grid cells) \\
+				CNRM-CM5 & 16 km (59 $\times$ 56 grid cells) \\
+				\hline
+			\end{tabular}
+		\end{table}
+		
+		To determine the performance of the sensitivity simulation, an evaluation was performed. The evaluation procedure was adapted from \textcite{Bilang2022}.
+		The results of the simulation was compared to real data from the Integrated Surface Database (ISD).
+		The ISD is maintained by the United States National Oceanic and Atmospheric Administration, and is readily available on their website 
+			(\url{https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database}).
+		Data points missing from the data set were handled by replacing them with the mean of the data.
+		The areas of study as well as their corresponding stations to be used in the evaluation are listed in Table \ref{tab:isd-stations}.
+	
+		\begin{table}	
+			\caption{Areas of study and their corresponding stations in the Integrated Surface Dataset (ISD).}
+			\label{tab:isd-stations}
+			\centering
+			\begin{tabular}{lll}
+				\hline \hline
+				& Area of Study             & ISD Station Name                       \\
+				\hline
+				1 & Angeles, Pampanga         & Clark International Airport        \\
+				2 & Baguio, Benguet           & Baguio                             \\
+				3 & Manila, Metro Manila      & Manila                             \\
+				4 & Olongapo, Zambales        & Cubi Point                         \\
+				5 & Pasay, Metro Manila      & Ninoy Aquino International Airport \\
+				6 & Quezon City, Metro Manila & Science Garden \\                   
+				\hline
+			\end{tabular}	
+		\end{table}
+	
+		Four performance statistics were computed using equations \ref{eq:mean-bias} to \ref{eq:y-bar},
+			where $y_i$ is the modeled value, $y_{i,\text{obs}}$ is the observed value, and $N$ is the number of data points (\cite{Bilang2022}).
+		The mean bias (MB) is a measure of the model to overestimate or underestimate a variable (\cite{Carbonell2013}), and is calculated by
+		\begin{equation}
+			\text{MB} =
+				\frac{1}{N}
 				\sum_{i=1}^{N}
-				(y_i - y_{i,\text{obs}}) ^ 2
-			}{N}
-		}.
-		\label{eq:root-mean-square-error}
-	\end{equation}
-	Lastly, the index of agreement (IOA), introduced by \textcite{Willmott1980}, shows how an error-free model predicts a variable.
-	The index ranges between \num{0} and \num{1},
-		with a value of \num{0} meaning no agreement between the model and observed data,
-		and a value of \num{1} meaning a perfect match. 
-	It is computed as
-	\begin{equation}
-		\text{IOA} =
-			1 - 
-			\frac{
-				\sum_{i=1}^{N}
-				(y_i - y_{i,\text{obs}}) ^ 2
-			}{
-				\sum_{i=1}^{N} (
-					|y_i - \bar{y}| +
-					|y_{i,\text{obs}} - \bar{y}|
-				)^2
-			},
-			\label{eq:index-of-agreement}
-	\end{equation}
-	where
-	\begin{equation}
-		\bar{y} = 
-			\frac{1}{N}
-			\sum_{i=1}^{N} y_{i,\text{obs}}.
-			\label{eq:y-bar}
-	\end{equation}
-	Before computing the statistics, the model values were first rounded to the nearest tenth in order to match the accuracy of the observed values from the ISD.
-	The threshold for these values to determine if the model is performing well are given in Table \ref{tab:performance-statistics-threshold}, as adapted from \textcite{Bilang2022}.
+				(y_i - y_{i,\text{obs}}).
+				\label{eq:mean-bias}
+		\end{equation}
+		The mean absolute error (MAE) is used to measure the closeness of the modeled and observed values (\cite{Arasa2016}).
+		It is calculated by
+		\begin{equation}
+			\text{MAE} =
+				\frac{1}{N}
+				\sum_{i=1}^{N} 
+				|y_i - y_{i,\text{obs}}|. \label{eq:mean-absolute-error}
+		\end{equation}
+		The root mean square error (RMSE) is similar to the MAE but more sensitive to large errors due to the squared term (\cite{Carbonell2013}).
+		It is calculated by
+		\begin{equation}
+			\text{RMSE} =
+			\sqrt{
+				\frac{
+					\sum_{i=1}^{N}
+					(y_i - y_{i,\text{obs}}) ^ 2
+				}{N}
+			}.
+			\label{eq:root-mean-square-error}
+		\end{equation}
+		Lastly, the index of agreement (IOA), introduced by \textcite{Willmott1980}, shows how an error-free model predicts a variable.
+		The index ranges between \num{0} and \num{1},
+			with a value of \num{0} meaning no agreement between the model and observed data,
+			and a value of \num{1} meaning a perfect match. 
+		It is computed as
+		\begin{equation}
+			\text{IOA} =
+				1 - 
+				\frac{
+					\sum_{i=1}^{N}
+					(y_i - y_{i,\text{obs}}) ^ 2
+				}{
+					\sum_{i=1}^{N} (
+						|y_i - \bar{y}| +
+						|y_{i,\text{obs}} - \bar{y}|
+					)^2
+				},
+				\label{eq:index-of-agreement}
+		\end{equation}
+		where
+		\begin{equation}
+			\bar{y} = 
+				\frac{1}{N}
+				\sum_{i=1}^{N} y_{i,\text{obs}}.
+				\label{eq:y-bar}
+		\end{equation}
+		Before computing the statistics, the model values were first rounded to the nearest tenth in order to match the accuracy of the observed values from the ISD.
+		The threshold for these values to determine if the model is performing well are given in Table \ref{tab:performance-statistics-threshold}, as adapted from \textcite{Bilang2022}.
+	
+		\begin{table}	
+			\caption{Recommended values of statistical tests for near-surface air temperature.}
+			\label{tab:performance-statistics-threshold}
+			\centering
+			\begin{tabular}{l l}
+				\hline \hline
+				Statistical parameter & Criteria\\
+				\hline
+				MB & $\leq \pm \qty{2.0}{\degreeCelsius}$ \\
+				RMSE & $\leq \qty{3.5}{\degreeCelsius}$\\
+				MAE & $\leq \pm \qty{2.0}{\degreeCelsius}$\\
+				IOA	& $\geq \num{0.8}$\\
+				\hline
+			\end{tabular}		
+		\end{table}
 
-	\begin{table}	
-		\caption{Recommended values of statistical tests for near-surface air temperature.}
-		\label{tab:performance-statistics-threshold}
-		\centering
-		\begin{tabular}{l l}
-			\hline \hline
-			Statistical parameter & Criteria\\
-			\hline
-			MB & $\leq \pm \qty{2.0}{\degreeCelsius}$ \\
-			RMSE & $\leq \qty{3.5}{\degreeCelsius}$\\
-			MAE & $\leq \pm \qty{2.0}{\degreeCelsius}$\\
-			IOA	& $\geq \num{0.8}$\\
-			\hline
-		\end{tabular}		
-	\end{table}
+	\subsection{Analysis}
+		After the best-performing parameters were chosen, the model was run again to simulate more years.
+		The simulation was run for another year until 2018, December 31.
+		Then another simulation was run from 2012, January 1 to 2014, December 31,
+			with the year 2012 considered as spin-up time.
+		The new data is combined with data from the model evaluation data to give hindcast data from 2013 to 2018.
+		Yearly and monthly means, minimums, and maximums were calculated and graphed.
+		Mean diurnal temperature of the hottest year per season was also calculated and graphed.
+		
 
 \section{Forecasting}
 	For forecasting, a seasonal autoregressive integrated moving average model (SARIMA) was trained on the hindcast data.
@@ -276,7 +291,7 @@
 		The simulation started on 2026, January 2 and ended on 2031, December 31.
 		The year 2026 is considered as spin-up time and was ignored.
 		Thus, the five-year simulation period from 2027, January 1 to 2032, January 1 was considered for analysis.
-		
+		Like the hindcast analysis, yearly and monthly means, minimums, and maximums were calculated and graphed, and the Mean diurnal temperature of the hottest year per season was also calculated and graphed.
 		
 		
 		
