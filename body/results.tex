@@ -209,6 +209,8 @@
 	\end{figure}
 
 	Figure \ref{fig:yearly-boxplot-outside-mm} shows boxplots for both hindcast and forecast in Angeles and Baguio.
+	Angeles also reaches a maximum of $\qtyrange{37}{39}{\degreeCelsius}$ per year, like Pasay, Manila, and Quezon.
+	Meanwhile, Baguio's maximum reaches around $\qty{29}{\degreeCelsius}$. 
  
 %		\begin{figure}	
 %			\centering
@@ -219,10 +221,6 @@
 %			}
 %			\label{fig:hindcast-yearly-min-max}
 %		\end{figure}
-
-	Figure \ref{fig:hindcast-yearly-min-max} shows the yearly minimum and maximum near-surface air temperature for the cities.
-	The maximum for all cities except Baguio can reach around $\qtyrange{37}{39}{\degreeCelsius}$ per year.
-	Meanwhile, Baguio's maximum reaches around $\qty{29}{\degreeCelsius}$. 
 		
 	\begin{figure}	
 		\centering
@@ -310,7 +308,7 @@
 		\label{fig:hourly-mean-son}
 	\end{figure}
 
-	Figure \ref{fig:hindcast-hourly-mean} shows the diurnal mean simulated near-surface air temperature from December 2015 to November 2016, split into three-month seasons:
+	Figures \ref{fig:hourly-mean-dja} to \ref{fig:hourly-mean-son} shows the diurnal mean simulated near-surface air temperature from December 2015 to November 2016, split into three-month seasons:
 		December, January, and February (DJF);
 		March, April, and May (MAM);
 		June, July, and August (JJA);
@@ -325,32 +323,32 @@
 	
 	\begin{table}[]
 		\caption{
-			Mean simulated near-surface air temperature in degrees Celsius per season at 2 PM (Day), 2 AM (Night), and their difference (Diff.). Data simulated from December 2015 to November 2016.
+			Difference between mean simulated near-surface air temperature at 2 PM and 2 AM for the years 2015-2016 and 2028-2029 in degrees Celsius.
 		}
-		\label{tab:hindcast-difference-day-night}
+		\label{tab:difference-day-night}
 		\centering
 		\begin{tabular}{lSSSSS}
 			\hline \hline
-			& {Pasay} & {Quezon} & {Manila} & {Angeles} & {Baguio} \\
+			& {PASAY} & {QUEZON} & {MANILA} & {ANGELES} & {BAGUIO} \\
 			\hline
-      & \multicolumn{5}{c}{\textit{DJF}}           \\
-			Day   & 32.0  & 31.6   & 32.2   & 30.5    & 23.4   \\
-			Night & 27.2  & 25.8   & 27.1   & 22.9    & 16.7   \\
-			Diff. & 4.8   & 5.8    & 5.1    & 7.6     & 6.7    \\
+			& \multicolumn{5}{c}{\textit{DJF}}           \\
+			2015-2016 & 4.8   & 5.8    & 5.1    & 7.6     & 6.7    \\
+			2028-2029 & 6.5   & 7.3    & 6.7    & 10.1    & 10.1   \\
+			Increase  & 1.7   & 1.5    & 1.6    & 2.5     & 3.4    \\
 			& \multicolumn{5}{c}{\textit{MAM}}           \\
-			Day   & 34.9  & 34.6   & 35.0   & 34.2    & 24.7   \\
-			Night & 28.7  & 27.6   & 28.8   & 25.2    & 18.0   \\
-			Diff. & 6.2   & 6.9    & 6.1    & 9.0     & 6.7    \\
+			2015-2016 & 6.2   & 6.9    & 6.1    & 9.0     & 6.7    \\
+			2028-2029 & 6.1   & 7.4    & 6.2    & 10.6    & 8.5    \\
+			Increase  & -0.1  & 0.5    & 0.1    & 1.6     & 1.8    \\
 			& \multicolumn{5}{c}{\textit{JJA}}           \\
-			Day   & 31.3  & 30.3   & 31.1   & 29.7    & 22.8   \\
-			Night & 27.3  & 26.0   & 27.3   & 24.2    & 19.1   \\
-			Diff. & 3.9   & 4.3    & 3.8    & 5.4     & 3.7    \\
+			2015-2016 & 3.9   & 4.3    & 3.8    & 5.4     & 3.7    \\
+			2028-2029 & 4.7   & 5.1    & 4.6    & 5.9     & 4.7    \\
+			Increase  & 0.8   & 0.8    & 0.8    & 0.5     & 1.0    \\
 			& \multicolumn{5}{c}{\textit{SON}}           \\
-			Day   & 31.4  & 30.7   & 31.4   & 29.4    & 23.6   \\
-			Night & 27.0  & 25.9   & 26.9   & 23.5    & 18.4   \\
-			Diff. & 4.4   & 4.9    & 4.5    & 5.9     & 5.2 \\
-		  	\hline		
- 			\end{tabular}
+			2015-2016 & 4.4   & 4.9    & 4.5    & 5.9     & 5.2    \\
+			2028-2029 & 5.0   & 5.4    & 5.0    & 6.4     & 5.6    \\
+			Increase  & 0.6   & 0.5    & 0.5    & 0.5     & 0.4    \\
+			\hline  
+		\end{tabular}
 	\end{table}
 	
 	Table \ref{tab:hindcast-difference-day-night} shows the difference between daytime and noontime air temperature per season from December 2015 to November 2016.
@@ -477,7 +475,6 @@
 	Sea surface temperature, air temperature, wind speed, humidity, and other variables change over time, but surface characteristics do not.
 	This may be one source of innacuracy for the model, since cities tend to become more urbanized over time.
 	
-		
 	One limitation of this study is that it only studies one variable, namely: near-surface air temperature.
 	It does not examine ground temperature or temperature at different elevations.
 	It also does not examine other factors that may be relevant to the study of urban heat islands, such as humidity, wind speed, wind direction, or precipitation. 
