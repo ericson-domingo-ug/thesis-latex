@@ -377,23 +377,46 @@
 
 
 \section{SARIMA}
+
+	\begin{table}[]
+		\caption{Results of the stationarity test for the original data and the first-order differenced data. A p-value $< 0.05$ indicates that the data is stationary. Otherwise, it is non-stationary.}
+		\label{tab:results-stationarity}
+		\centering
+		\begin{tabular}{lSSSS}
+			\hline \hline
+			& \multicolumn{2}{c}{(Original)} & \multicolumn{2}{c}{(First-order difference)} \\
+			& {ADF}           & {p-value}        & {ADF}                  & {p-value}               \\
+			\hline
+			Pasay   & -1.12         & 0.709          & -3.07                & 0.029                 \\
+			Quezon  & -1.05         & 0.735          & -3.13                & 0.024                 \\
+			Manila  & -1.13         & 0.703          & -3.04                & 0.031                 \\
+			Angeles & -1.10         & 0.713          & -2.77                & 0.063                 \\
+			Baguio  & -0.83         & 0.810          & -4.07                & 0.001               \\
+			\hline  
+		\end{tabular}
+	\end{table}
+
+	Table \ref{tab:results-stationarity} show the results of the stationarity tests for the original data and the first-order differenced data.
+	The non-differenced data shows a p-value $> 0.05$, indicating that the data is non-stationary.
+	The first-order differenced data show a p-value $< 0.05$ for most cities except Angeles, which indicate that those cities are stationary.
+	Since the first-order differenced data are stationary, these results indicate that $d = 1$ is a good choice for a differencing factor.
 			
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{SARIMA/autocorrelations}
+		\includegraphics[width=\textwidth]{SARIMA/autocorrelations-first-order}
 		\caption{
-			Autocorrelation plots for the monthly mean time series data of Manila near-surface air temperature.
+			Autocorrelation plots for the first-order-differenced monthly mean time series data of Manila near-surface air temperature.
 		}
 		\label{fig:sarima-autocorrelations}
 	\end{figure}	
 	
-	Figure \ref{fig:sarima-autocorrelations} shows the autocorrelation plots for Manila.
+	Figure \ref{fig:sarima-autocorrelations} shows the autocorrelation plots for the first-order-differenced monthly mean time series data of Manila.
 	For the autocorrelation plot, 
 		there are significant negative correlations at $\num{3}$ and $\num4$ lags,
 		suggesting that $p = 3$ and $p = 4$ are possible good values for the autoregressive factor.
 	For the partial autocorrelation plot,
-		there is a significant positive correlation at $\num{1}$ and $\num{2}$ lags,
-		which suggest that $q = 1$ and $q = 2$ are possible good values for the moving average factor.
+		there is a significant positive correlation at $\num{2}$, $\num{3}$, and $\num{4}$ lags,
+		which suggest that $q = 2$, $3$, and $4$ are possible good values for the moving average factor.
 	
 	\begin{table}[]
 		\centering
