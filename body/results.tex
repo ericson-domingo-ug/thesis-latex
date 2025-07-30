@@ -308,14 +308,14 @@
 		\label{fig:hourly-mean-son}
 	\end{figure}
 
-	Figures \ref{fig:hourly-mean-dja} to \ref{fig:hourly-mean-son} shows the diurnal mean simulated near-surface air temperature from December 2015 to November 2016, split into three-month seasons:
+	Figures \ref{fig:hourly-mean-djf} to \ref{fig:hourly-mean-son} shows the diurnal mean simulated near-surface air temperature from December 2015 to November 2016, split into three-month seasons:
 		December, January, and February (DJF);
 		March, April, and May (MAM);
 		June, July, and August (JJA);
 		and
 		September, October, and November (SON).
 	In all seasons, the mean air temperature is at its lowest at 5 AM, and peaks at 2 PM for all cities except Baguio, which peaks at 11 AM.
-	The MAM season, corresponding to the Philippine's hot dry season, exhibits the highest air temperature compared to other seasons, in both daytime and nighttime.
+	For hindcast, the MAM season, corresponding to the Philippine's hot dry season, exhibits the highest air temperature compared to other seasons, in both daytime and nighttime.
 	The JJA and SON seasons, which correspond to the Philippine wet season, show similar diurnal temperature patterns.
 	The results for DJF, which correspond to the cool dry season, differ between cities.
 	For the cities of Pasay, Quezon, and Manila, the DJF season has a similar pattern to JJA and SON.
@@ -323,42 +323,52 @@
 	
 	\begin{table}[]
 		\caption{
-			Difference between mean simulated near-surface air temperature at 2 PM and 2 AM for the years 2015-2016 and 2028-2029 in degrees Celsius.
+			Difference between mean simulated near-surface air temperature at 2 PM and 2 AM for the years 2015-2016 in degrees Celsius.
 		}
-		\label{tab:difference-day-night}
+		\label{tab:hindcast-difference-day-night}
 		\centering
 		\begin{tabular}{lSSSSS}
 			\hline \hline
 			& {PASAY} & {QUEZON} & {MANILA} & {ANGELES} & {BAGUIO} \\
 			\hline
-			& \multicolumn{5}{c}{\textit{DJF}}           \\
-			2015-2016 & 4.8   & 5.8    & 5.1    & 7.6     & 6.7    \\
-			2028-2029 & 6.5   & 7.3    & 6.7    & 10.1    & 10.1   \\
-			Increase  & 1.7   & 1.5    & 1.6    & 2.5     & 3.4    \\
-			& \multicolumn{5}{c}{\textit{MAM}}           \\
-			2015-2016 & 6.2   & 6.9    & 6.1    & 9.0     & 6.7    \\
-			2028-2029 & 6.1   & 7.4    & 6.2    & 10.6    & 8.5    \\
-			Increase  & -0.1  & 0.5    & 0.1    & 1.6     & 1.8    \\
-			& \multicolumn{5}{c}{\textit{JJA}}           \\
-			2015-2016 & 3.9   & 4.3    & 3.8    & 5.4     & 3.7    \\
-			2028-2029 & 4.7   & 5.1    & 4.6    & 5.9     & 4.7    \\
-			Increase  & 0.8   & 0.8    & 0.8    & 0.5     & 1.0    \\
-			& \multicolumn{5}{c}{\textit{SON}}           \\
-			2015-2016 & 4.4   & 4.9    & 4.5    & 5.9     & 5.2    \\
-			2028-2029 & 5.0   & 5.4    & 5.0    & 6.4     & 5.6    \\
-			Increase  & 0.6   & 0.5    & 0.5    & 0.5     & 0.4    \\
-			\hline  
+			DJF & 4.8   & 5.8    & 5.1    & 7.6     & 6.7    \\
+			MAM & 6.2   & 6.9    & 6.1    & 9.0     & 6.7    \\
+			JJA & 3.9   & 4.3    & 3.8    & 5.4     & 3.7    \\
+			SON & 4.4   & 4.9    & 4.5    & 5.9     & 5.2    \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table}[]
+		\caption{
+			Difference between mean simulated near-surface air temperature at 2 PM and 2 AM for the years 2028-2029 in degrees Celsius.
+		}
+		\label{tab:forecast-difference-day-night}
+		\centering
+		\begin{tabular}{lSSSSS}
+			\hline \hline
+			& {PASAY} & {QUEZON} & {MANILA} & {ANGELES} & {BAGUIO} \\
+			\hline
+			DJF & 6.5   & 7.3    & 6.7    & 10.1    & 10.1   \\
+			MAM & 6.1   & 7.4    & 6.2    & 10.6    & 8.5    \\
+			JJA & 4.7   & 5.1    & 4.6    & 5.9     & 4.7    \\
+			SON & 5.0   & 5.4    & 5.0    & 6.4     & 5.6    \\
+			\hline
 		\end{tabular}
 	\end{table}
 	
-	Table \ref{tab:hindcast-difference-day-night} shows the difference between daytime and noontime air temperature per season from December 2015 to November 2016.
+	Table \ref{tab:hindcast-difference-day-night} shows the difference between daytime and noontime air temperature per season from December to November in the years 2015-2016.
 	Since the diurnal air temperature peaks at 2 PM, this hour was chosen to represent daytime, while 2 AM is chosen to represent nighttime.
-	The difference is greatest during the MAM season, and the least during JJA.
-	Pasay and Manila have the least difference between day and night temperature,
+	For the years 2015-2016, the difference is greatest during the MAM season, and the least during JJA.
+	Pasay and Manila have the least difference between day and night temperature among the cities,
 		with a temperature of $\qty{3.9}{\degreeCelsius}$ and $\qty{3.8}{\degreeCelsius}$ during the JJA season,
 		and a temperature of $\qty{6.2}{\degreeCelsius}$ and $\qty{6.1}{\degreeCelsius}$ during the MAM season,
 		respectively.
-	Meanwhile, Angeles shows the greatest difference, with a temperature of $\qty{5.4}{\degreeCelsius}$ during the JJA season, and $\qty{6.1}{\degreeCelsius}$ during the MAM season.
+	Meanwhile, Angeles shows the greatest difference among the cities, with a temperature of $\qty{5.4}{\degreeCelsius}$ during the JJA season, and $\qty{6.1}{\degreeCelsius}$ during the MAM season.
+	Table \ref{tab:forecast-difference-day-night} shows the difference between daytime and noontime air temperature per season from December to November in the years 2028-2029.
+	For the years 2028-2029, Angeles also show the greatest difference among the cities, while Pasay shows the least difference between day and night.
+	
+	%TODO: move ot discussion.
 	These results may be explained by the relative urbanization of these cities.
 	One characteristic of urban heat islands are high temperature at nighttime (\cite{Oke2017urban}).
 	Pasay and Manila are the most urbanized among the cities, with little green spaces,
