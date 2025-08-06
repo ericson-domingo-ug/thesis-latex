@@ -367,14 +367,40 @@
 	Meanwhile, Angeles shows the greatest difference among the cities, with a temperature of $\qty{5.4}{\degreeCelsius}$ during the JJA season, and $\qty{6.1}{\degreeCelsius}$ during the MAM season.
 	Table \ref{tab:forecast-difference-day-night} shows the difference between daytime and noontime air temperature per season from December to November in the years 2028-2029.
 	For the years 2028-2029, Angeles also show the greatest difference among the cities, while Pasay shows the least difference between day and night.
-	
-	%TODO: move ot discussion.
-	These results may be explained by the relative urbanization of these cities.
-	One characteristic of urban heat islands are high temperature at nighttime (\cite{Oke2017urban}).
-	Pasay and Manila are the most urbanized among the cities, with little green spaces,
-		and Quezon has relatively more green spaces compared to the other two cities (\cite{Bilang2022}).
-	Furthermore, Angeles has vast green spaces surrounding it, which may explain the high difference between daytime and nighttime temperatures.
 
+%	\begin{table}[]
+%		\caption{Mean urban heat island intensity}
+%		\label{tab:UHII}
+%		\centering
+%		\begin{tabular}{llll}
+%			\hline \hline
+%			& 2013-2018 & 2027-2031 & Increase \\
+%			\hline
+%			PASAY   & 1.75      & 1.82      & 0.07     \\
+%			QUEZON  & 0.80      & 0.89      & 0.08     \\
+%			MANILA  & 1.72      & 1.85      & 0.13     \\
+%			ANGELES & 1.31      & 1.33      & 0.02     \\			
+%			BAGUIO  & 0.13      & 0.01      & -0.12   \\
+%			\hline
+%		\end{tabular}
+%	\end{table}
+
+	\begin{figure}	
+		\centering
+		\includegraphics[width= 0.49 \textwidth]{hindcast/uhii-boxplot}		
+		\includegraphics[width= 0.49 \textwidth]{forecast/uhii-boxplot}		
+		\caption{
+			Boxplots for the urban heat island intensity for the hindcast (left) and forecast (right).
+		}
+		\label{fig:uhii-boxplot}
+	\end{figure}	
+
+	Figure \ref{fig:uhii-boxplot} shows a boxplot of the urban heat island intensity for the hindcast and the forecast.
+	Pasay and Manila have the highest urban heat island intensity, with a mean of 
+		$\qty{1.75}{\degreeCelsius}$ and $\qty{1.72}{\degreeCelsius}$ for the hindcast,
+		and
+		$\qty{1.82}{\degreeCelsius}$ and $\qty{1.85}{\degreeCelsius}$ for the forecast, respectively.
+	While most cities show an increase in the mean urban heat island intensity, Baguio shows a decrease, from $\qty{0.13}{\degreeCelsius}$ to $\qty{0.01}{\degreeCelsius}$.
 
 \section{SARIMA}
 
@@ -501,7 +527,21 @@
 
 		
 
-\section{Discussion}	
+\section{Discussion}
+	Results show that urban heat island intensity can reach up to around $\qty{8}{\degreeCelsius}$. This matches the work of \textcite{Bilang2022}, who has found an intensity maximum of $\qty{8}{\degreeCelsius}$ during the daytime in Metro Manila.
+	
+	One characteristic of urban heat islands are high temperature at nighttime (\cite{Oke2017urban}).
+	Results show that Pasay and Manila have the greatest difference between daytime and nighttime temperature, and Angeles having the least.
+	Pasay and Manila are the most urbanized among the cities, with little green spaces,
+	and Quezon has relatively more green spaces compared to the other two cities (\cite{Bilang2022}).
+	Furthermore, Angeles has vast green spaces surrounding it, which may explain the high difference between daytime and nighttime temperatures.
+
+	The hindcast generally shows greater air temperature compared to the forecast.
+	This may be because the two simulations use different data sets.
+	The hindcast uses the EIN15 dataset, a global reanalysis of weather data, while the forecast uses CNRM-CM5, a general circulation model.
+	EIN15 does not have the capability of forecasting.
+	This may also be why EIN15 has a higher accuracy over CNRM-CM5, as it is based on observed weather data.
+
 	There are some sources of anthropogenic heat that are accounted for in the model, including crop irrigation, population density, gross domestic production, and peak month of agricultural waste burning.
 	In addition, RegCM with the Community Land Model accounts for the percentage of urban in the area.
 	However, one limitation of these is that these inputs are static, and do not change with time, unlike.

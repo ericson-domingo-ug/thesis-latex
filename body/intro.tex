@@ -41,12 +41,12 @@
 	
 
 \section{Scope and Delimitations}
-	This study will focus on six cities: Angeles, Baguio, Manila, Olongapo, Pasay, and Quezon City.
+	This study focused on six cities: Angeles, Baguio, Manila, Olongapo, Pasay, and Quezon City.
 	These cities were chosen as they are all highly-urbanized cities with weather data available from the Integrated Surface Dataset (ISD).
 	The near-surface air temperature of these cities will be analyzed.
-	This study will study two five-year time periods: 
-		the present represented by the years 2014 to 2019, 
-		and the future represented by the years 2026 to 2030.
+	This study simulated two time periods: 
+		a hindcast of the years 2013 to 2018, 
+		and a forecast of the years 2026 to 2031.
 
 	The RegCM software will be used for the simulations.
 	RegCM is a free, limited area model for long-term regional climate simulation.
@@ -54,8 +54,5 @@
 	The newest version, RegCM5, was released in 2023 and will be used in this study.
 	This latest version is described in detail by \textcite{Giorgi2023}. 
 	The previous version, RegCM4, was released in 2012 (\textcite{Giorgi2012}).
-	
-	The simulations will run on a few assumptions.
-	The simulation will not model population increase.
-	It will also assume that the urbanization of Metro Manila will remain fixed and that there will be no changes to the urban landscape throughout the simulation period.
-	Anthropogenic heat will also be ignored in this study.
+	The default physics models of RegCM5 will be used, except for the land surface model, in which an urban land model was used over the default.
+	Surface characteristics, such as the urbanization of places, are static, and do not change in the simulation as time progress. 

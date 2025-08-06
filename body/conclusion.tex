@@ -1,0 +1,34 @@
+\section{Conclusion}
+	The general objective of the study was to forecast the effect of the urban heat island on near-surface air temperature in select highly-urbanized cities of Luzon, Philippines.
+	The simulation used was RegCM5, a limited-area, long-term climate model developed by the International Center for Theoretical Physics.
+	
+	First, sensitivity runs were conducted and evaluated to determine the accuracy of RegCM5 in simulating near-surface air temperature in select cities of Luzon.
+	The results show that in general, using a finer horizontal resolution increases the accuracy of a simulation.
+	Using the EIN15 dataset for initial conditions and boundary conditions, together with an $\qty{8}{km}$ horizontal resolution shows the best results among all results tested, with an index of agreement ranging from $\numrange{0.78}{0.91}$.
+	Furthermore, the mean bias, root mean square error, and mean absolute error for the run fall within the recommended values of $\leq \pm \qty{2.0}{\degreeCelsius}$, $\leq \qty{3.5}{\degreeCelsius}$, and $\leq \pm \qty{2.0}{\degreeCelsius}$ respectively.
+	The CNRM-CM5 dataset for initial conditions and boundary conditions show an index of agreement of $\numrange{0.67}{0.81}$, indicating that a finer resolution maybe be needed in order to get accurate results when using this dataset.
+	
+	Second, a hindcast from 2013 to 2018, and a forecast from 2027-2031 was run and analysed.
+	Results show that highly-urbanized cities exhibit a smaller difference between daytime and nighttime temperature compared to less urbanized ones.
+	Pasay and Manila have the highest mean urban heat island intensity among the cities studied: 
+		$\qty{1.75}{\degreeCelsius}$ and $\qty{1.72}{\degreeCelsius}$ from 2013 to 2018,
+		and
+		$\qty{1.82}{\degreeCelsius}$ and $\qty{1.85}{\degreeCelsius}$ from 2027-2031, respectively.
+	Maximum urban heat island intensity can reach 
+		$\qtyrange{4.1}{7.7}{\degreeCelsius}$ from 2013 to 2018,
+		and
+		$\qtyrange{4.2}{8.2}{\degreeCelsius}$ from 2027-2031.
+	
+	Third, a seasonal autoregressive integrated moving average (SARIMA) model used to forecast air temperature.
+	Multiple sets of parameters were first tested and evaluated to see which parameters performed the best.
+	The best-performing one was chosen to forecast data.
+	SARIMA forecasts mean near-surface air temperature of cities to increase by $\qtyrange{0.9}{1.0}{\degreeCelsius}$ by 2030.
+
+The study overall shows that RegCM5 can be accurate in simulating urban heat, but can be improved with finer resolution and coupling with other models, and that 
+the urban heat island effect will be greater by 2030.
+	
+\section{Recommendations}
+	For researchers, possible avenues for future research include:
+	incorporating other physics models, using different datasets for initial conditions and boundary conditions, using different studying other cities in the Philippines, and using finer horizontal resolutions and longer time scales.
+	Researchers may also incorporate more sophisticated modeling of anthropogenic heat into RegCM.
+	For city planners and local government officials, these results can be used to better study heat in cities, implement policies and projects to reduce heat in cities, as well as to improve disaster and risk reduction management.

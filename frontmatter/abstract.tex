@@ -1,14 +1,21 @@
 \chapter*{Abstract}
 
-The urbanization of a settlement can make its environment have higher temperatures compared to its nearby rural areas.
-This phenomenon is known as the urban heat island effect.
-One method of studying the urban heat island effect is through computer simulations, and in order to have accurate results, the performance of the computer simulation to be used needs to be evaluated.
-This study aims to evaluate the performance of the latest version of the Regional Climate Model (RegCM5) developed by the International Center for Theoretical Physics, in simulating the near-surface air temperature in six highly-urbanized cities in Luzon, Philippines: Angeles, Baguio, Manila, Olongapo, Pasay, and Quezon.
-Four simulations were run with two different datasets of initial conditions and boundary conditions (ICBC): EIN15 and CNRM-CM5, and two different horizontal resolutions: 16 km and 8 km. The results of the simulations were compared to weather station data from the Integrated Surface Dataset (ISD), maintained by the National Oceanic and Atmospheric Administration.
-Four evaluation statistics were computed: the mean bias (MB), mean absolute error (MAE), and root mean square error (RMSE) show the closeness of the simulation to observed data, and the index of agreement (IOA) shows how error-free a model prediction is.
-Results show among the four runs, the run using EIN15 as its ICBC with 8 km resolution performs the best, showing MB, MAE, and RMSE values below $\pm \qty{2.0}{\degreeCelsius}$, $\qty{2.0}{\degreeCelsius}$, and $\qty{3.5}{\degreeCelsius}$, respectively.
-Furthermore, the run exhibits high IOA ($\geq \num{0.8}$) in all cities except Olongapo. The runs using CNRM-CM5 perform poorly in both resolutions, with most IOA values $< \num{0.8}$, which indicate that a finer resolution is needed in order for it to be more accurate.
-%TODO: add implications
+The urbanization of a settlement can make its environment have higher temperatures compared to its nearby rural areas,
+	a phenomenon known as the urban heat island effect.
+This study aims to forecast the effect of the urban heat island on near-surface air temperature in select highly-urbanized cities of Luzon, Philippines: Angeles, Baguio, Manila, Olongapo, Pasay, and Quezon.
+The simulation used is the Regional Climate Model (RegCM5), developed by the International Center for Theoretical Physics.
+Model evaluation was first conducted in order to evaluate the accuracy of the model to simulate.
+The results of the sensitivity runs were compared to weather station data from the Integrated Surface Dataset (ISD), maintained by the National Oceanic and Atmospheric Administration.
+A hindcast from 2013-2018 and forecast from 2027-2031 was conducted using best settings from model evaluation, and a SARIMA model was applied to hindcast data in order to see trends in data.
+Results show among the sensitivity runs, the run using EIN15 as its ICBC with 8 km resolution performs the best, showing mean bias, mean absolute error, and root mean square error values below $\pm \qty{2.0}{\degreeCelsius}$, $\qty{2.0}{\degreeCelsius}$, and $\qty{3.5}{\degreeCelsius}$, respectively.
+Furthermore, the run exhibits high IOA ($\geq \num{0.8}$) in all cities except Olongapo.
+Simulation shows that more urbanized cities have a lower difference between daytime and nighttime temperature compared to less urbanized ones.
+Maximum urban heat island intensity can reach 
+$\qtyrange{4.1}{7.7}{\degreeCelsius}$ from 2013 to 2018, and
+$\qtyrange{4.2}{8.2}{\degreeCelsius}$ from 2027-2031 for the studied cities.
+SARIMA forecasts to have the mean near-surface air temperature of cities increase by $\qtyrange{0.9}{1.0}{\degreeCelsius}$ by 2030.
+The study overall shows that RegCM5 can be accurate in simulating urban heat, but can be improved with finer resolution and coupling with other models, and that 
+the urban heat island effect will be greater by 2030.
 
 \vspace{3ex} \noindent {\itshape Key Words}---near-surface air temperature; RegCM5; urban heat islands; Luzon; Philippines.
 
