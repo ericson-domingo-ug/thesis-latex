@@ -1,0 +1,39 @@
+This appendix chapter will briefly discuss how to install, test, and run RegCM.
+This chapter will also discuss how to access the User's Guide for RegCM.
+Most of the instructions are already covered in the User's Guide,
+	but the other parts that were not covered will be discussed here.
+	
+\section{Obtaining the Model and Documentation}
+	According to the User's Guide, the packed archive file with the model code can be downloaded from the G-forge website: 
+		\url{http://gforge.ictp.it/gf/project/regcm/frs}.
+	However, I could not access the site myself.
+	Instead, I had to go into the model's GitHub site:
+	\begin{center}
+		\url{https://github.com/ICTP/RegCM}
+	\end{center}
+	to download it.
+	From the GitHub website, under ``Releases'', there will be a release entitled ``NH V5 code''.
+	Click on that, and you will see a link to download either a \texttt{zip} package or a \texttt{tar.gz} package.
+	Download the \texttt{tar.gz} package, and extract the files from those packages using
+	\begin{center}
+		\texttt{tar -zxvf RegCM-5.0.0.tar.gz}.
+	\end{center}
+	Alternatively, if your machine has \texttt{git} and you want the most updated version of RegCM, you can use \texttt{git pull} to download the source code directly from the most recent commit to the GitHub master branch.
+	Do note though, that the source code from the Releases tab may be different from the most recent commits to the master branch.
+
+\section{Accessing the User's Guide}
+	Before doing this section, do a quick Google search to see if an updated version of the RegCM User's Guide is available online.
+
+	The User's Guide does not come as a \texttt{pdf}.
+	Instead, the User's Guide comes with the RegCM source code as \LaTeX\ code.
+	You will need a \LaTeX\ distribution and compile the code yourself.
+	I will not discuss how to install \LaTeX\ here, but this guide in StackExchange may be helpful to you:
+	\begin{center}
+		\url{https://stackoverflow.com/a/1017170}.
+	\end{center}
+
+	In the source code for RegCM, there is a folder called \texttt{Doc}.
+	In that folder is the \LaTeX\ source code for the User's Guide, Developer Guide, and Reference Manual, and a commented version of the input file for RegCM.
+	Use your \LaTeX\ distribution to compile the \texttt{UserGuide.tex} file under the \texttt{UserGuide} folder into a readable \texttt{pdf}.
+	Following the User's Guide will be very helpful for setting up, testing, and running RegCM.
+	
