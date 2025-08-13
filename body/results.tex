@@ -556,10 +556,19 @@
 	EIN15 does not have the capability of forecasting.
 	This may also be why EIN15 has a higher accuracy over CNRM-CM5, as it is based on observed weather data.
 
+	\begin{figure}	
+		\centering
+		\includegraphics[width = \textwidth]{google-maps-olongapo}
+		\caption{
+			A closer look at Olongapo. Weather station marked with pin. Taken from Google Maps.
+		}
+		\label{fig:google-maps-olongapo}
+	\end{figure}
+
 	It can be seen that in general, increasing the horizontal resolution of the simulation will increase the IOA, giving a more accurate simulation.
 	However, the EIN15 runs for Olongapo are different, wherein using a finer resolution made the model less accurate.
 	This does not happen with the Olongapo CNRM-CM5 runs; using a finer resolution made the model more accurate.
-	One possible reason for this may be because of the station being situated by a bay.
+	One possible reason for this may be because of the station being situated by a bay (Figure \ref{fig:google-maps-olongapo}).
 	The nearby water can play a part with the station’s air temperature, which the simulation settings may not have accounted for.
 	With the lower resolution, the interaction with water may have been negligible enough as to not affect settings, but the higher resolution gives more grid cells over water, which is perhaps why the accuracy worsened.
 	Another possible reason for this is the limitation of this study that the analysis is limited by the sampling of the weather stations.
