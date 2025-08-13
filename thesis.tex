@@ -8,78 +8,6 @@
 	\input{./frontmatter/title.tex}
 \end{titlingpage}
 
-%\pagenumbering{roman}
-\frontmatter
-
-\includepdf[
-	pages=-,
-	addtotoc={
-		1,
-		chapter,
-		1,
-		General Research Ethics Checklist,
-		sec:ethics-checklist
-	}
-]{./frontmatter/domingo-ethics-checklist}
-
-\includepdf[
-pages=-,
-addtotoc={
-	1,
-	chapter,
-	1,
-	Application for Ethics Review,
-	sec:ethics-application
-}
-]{./frontmatter/RERC Form 6A.pdf}
-
-\includepdf[
-pages=-,
-addtotoc={
-	1,
-	chapter,
-	1,
-	Certificate of Exemption,
-	sec:ethics-application
-}
-]{./frontmatter/Certificate of Exemption.pdf}
-
-%\includepdf[
-%	pages=-,
-%	addtotoc={
-%		1,
-%		chapter,
-%		1,
-%		Research Ethics Clearance Form,
-%		sec:ethics-clearance
-%	}
-%]{./frontmatter/domingo-ethics-clearance}
-
-\includepdf[
-pages=-,
-addtotoc={
-	1,
-	chapter,
-	1,
-	Agreement on Intellectual Property Right,
-	sec:intellectual-property
-}
-]{./frontmatter/domingo-IP}
-
-
-\includepdf[
-	pages=-,
-	addtotoc={
-		1,
-		chapter,
-		1,
-		Agreement on Intellectual Property Right,
-		sec:intellectual-property
-	}
-]{./frontmatter/domingo-IP}
-
-\ULCornerWallPaper{1}{./format/dlsu_thesis_paper_letterhead.pdf}
-
 %\ifFinished
 %\chapter*{}
 %{
@@ -108,16 +36,13 @@ addtotoc={
 %}
 %\cleardoublepage
 
-%\phantomsection
-%\addcontentsline{toc}{chapter}{Acknowledgment}
-%\begin{SingleSpace}
-%	\input{acknowledgment.tex}
-%	\ifPutLineNumbers
-%	\AcknowledgmentGuide
-%	\fi
-%\end{SingleSpace}
-%\cleardoublepage
-%\fi
+\frontmatter
+\ULCornerWallPaper{1}{./format/dlsu_thesis_paper_letterhead.pdf}
+
+\begin{SingleSpace}
+	\tableofcontents
+	\cleardoublepage
+\end{SingleSpace}
 
 \input{./frontmatter/approval-sheet.tex}
 
@@ -132,10 +57,81 @@ addtotoc={
 %		\input{./frontmatter/acknowledgments.tex}
 %		\cleardoublepage
 %\end{DoubleSpace}
-\begin{SingleSpace}
-	\tableofcontents
-	\cleardoublepage
-	
+
+%\pagenumbering{roman}
+
+\ClearWallPaper
+
+\includepdf[
+pages=-,
+addtotoc={
+	1,
+	chapter,
+	1,
+	General Research Ethics Checklist,
+	sec:ethics-checklist
+}
+]{./frontmatter/domingo-ethics-checklist}
+
+\includepdf[
+pages=-,
+addtotoc={
+	1,
+	chapter,
+	1,
+	Application for Ethics Review,
+	sec:ethics-application
+}
+]{./frontmatter/RERC Form 6A.pdf}
+
+\includepdf[
+pages=-,
+addtotoc={
+	1,
+	chapter,
+	1,
+	Certificate of Exemption,
+	sec:ethics-application
+}
+]{./frontmatter/Certificate of Exemption.pdf}
+
+%\includepdf[
+%	pages=-,
+%	addtotoc={
+	%		1,
+	%		chapter,
+	%		1,
+	%		Research Ethics Clearance Form,
+	%		sec:ethics-clearance
+	%	}
+%]{./frontmatter/domingo-ethics-clearance}
+
+\includepdf[
+pages=-,
+addtotoc={
+	1,
+	chapter,
+	1,
+	Agreement on Intellectual Property Right,
+	sec:intellectual-property
+}
+]{./frontmatter/domingo-IP}
+
+
+\includepdf[
+pages=-,
+addtotoc={
+	1,
+	chapter,
+	1,
+	Agreement on Intellectual Property Right,
+	sec:intellectual-property
+}
+]{./frontmatter/domingo-IP}
+
+\ULCornerWallPaper{1}{./format/dlsu_thesis_paper_letterhead.pdf}
+
+\begin{SingleSpace}	
 	\listoffigures
 	\cleardoublepage
 	
