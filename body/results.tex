@@ -112,15 +112,12 @@
 	For Olongapo, the two EIN15 runs both show good results among all the metrics, except for the IOA.
 	The two CNRM-CM5 runs also show a low IOA, indicating inaccurate values for this station.
 	
-	It can be seen that in general, increasing the horizontal resolution of the simulation will increase the IOA, giving a more accurate simulation.
+	Most runs improve accuracy when switching from a lower resolution to a higher resolution.
 	One exception to this observation is for Olongapo.
 	When going from a 16 km resolution to an 8 km resolution using EIN15, MB, MAE, and RMSE values improved, but the IOA worsened from $0.85$ to $0.78$.
 	A graph of the observed data and simulation data using EIN15 for Olongapo is seen in Figure \ref{fig:ein15-sim-vs-observed-olongapo}.
 	While the simulation using the lower resolution undershoots the observed temperature by a few degrees Celcius, the size of its oscillations closely resemble the observed data.
 	The simulation using the higher resolution exhibits a smaller oscillation size compared to the observed data, though its average more closely follows the observed.
-	One reason for this may be because of the station being situated by a bay.
-	The nearby water can play a part with the station’s air temperature, which the simulation settings may not have accounted for.
-	With the lower resolution, the interaction with water may have been negligible enough as to not affect settings, but the higher resolution gives more grid cells over water, which is perhaps why the accuracy worsened.		
 	
 	\begin{figure}	
 		\centering
@@ -559,6 +556,16 @@
 	EIN15 does not have the capability of forecasting.
 	This may also be why EIN15 has a higher accuracy over CNRM-CM5, as it is based on observed weather data.
 
+	It can be seen that in general, increasing the horizontal resolution of the simulation will increase the IOA, giving a more accurate simulation.
+	However, the EIN15 runs for Olongapo are different, wherein using a finer resolution made the model less accurate.
+	This does not happen with the Olongapo CNRM-CM5 runs; using a finer resolution made the model more accurate.
+	One possible reason for this may be because of the station being situated by a bay.
+	The nearby water can play a part with the station’s air temperature, which the simulation settings may not have accounted for.
+	With the lower resolution, the interaction with water may have been negligible enough as to not affect settings, but the higher resolution gives more grid cells over water, which is perhaps why the accuracy worsened.
+	Another possible reason for this is the limitation of this study that the analysis is limited by the sampling of the weather stations.
+	The coordinates of the weather station may not correspond exactly to the coordinates of the grid points, which may affect the reading for Olongapo.
+	Verifying these conjectures are outside the scope of this study.		
+
 	There are some sources of anthropogenic heat that are accounted for in the model, including crop irrigation, population density, gross domestic production, and peak month of agricultural waste burning.
 	In addition, RegCM with the Community Land Model accounts for the percentage of urban in the area.
 	However, one limitation of these is that these inputs are static, and do not change with time, unlike.
@@ -571,8 +578,6 @@
 	Another limitation is that this study chose six specific cities to study: Angeles, Baguio, Manila, Olongapo, Pasay, and Quezon.
 	Another limitation is that this study only examines the periods from 2013 to 2018, as well as from 2027 to 2031.
 	Future studies may choose to study more cities, more variables, or study longer timeframes.
-	
-	Another limitation of this study is that the analysis is limited by the sampling of the weather stations. The coordinates of the weather station may not correspond exactly to the coordinates of the grid points.
 	
 	There are many factors that can affect the findings. 
 	Firstly, the physics schemes used in this run are all the default schemes, with the exception of the Community Land Model version 4.5 being chosen over the default BATS1e. 
