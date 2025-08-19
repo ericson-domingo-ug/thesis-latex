@@ -46,7 +46,21 @@
 	\cleardoublepage
 \end{SingleSpace}
 
-\input{./frontmatter/approval-sheet.tex}
+\ClearWallPaper
+\includepdf[
+pages=-,
+addtotoc={
+	1,
+	chapter,
+	1,
+	Approval Sheet,
+	sec:approval-sheet
+}
+]{./frontmatter/Domingo Approval Sheet}
+
+%\input{./frontmatter/approval-sheet.tex}
+
+\ULCornerWallPaper{1}{./format/dlsu_thesis_paper_letterhead.pdf}
 
 \phantomsection
 \addcontentsline{toc}{chapter}{Abstract}
