@@ -67,12 +67,15 @@ addtotoc={
 \begin{DoubleSpace}
 	\input{./frontmatter/abstract.tex}
 \end{DoubleSpace}
+
 \cleardoublepage
-%\begin{DoubleSpace}
-%	\chapter*{Acknowledgments}
-%		\input{./frontmatter/acknowledgments.tex}
-%		\cleardoublepage
-%\end{DoubleSpace}
+
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\begin{DoubleSpace}	
+	\chapter{Acknowledgments}
+		\input{./frontmatter/acknowledgments.tex}
+		\cleardoublepage
+\end{DoubleSpace}
 
 %\pagenumbering{roman}
 
